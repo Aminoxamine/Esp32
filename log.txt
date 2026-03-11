@@ -174,3 +174,20 @@
 [17:29:06] Versión actual: 1
 [17:29:06] Última versión: 0
 [17:29:06] Firmware ya actualizado
+[17:29:08] Logs subidos correctamente a GitHub
+[00:00:02] SPIFFS montado correctamente
+=== Inicio log ===
+[00:00:02] Versión cargada: 1
+[00:00:02] Intentando WiFi: HUAWEI-2.4G-m2gC
+[00:00:02] SPIFFS montado correctamente
+=== Inicio log ===
+[00:00:02] Versión cargada: 1
+[00:00:02] Intentando WiFi: HUAWEI-2.4G-m2gC
+[00:00:06] WiFi conectado: HUAWEI-2.4G-m2gC
+[00:00:06] IP: 192.168.18.192
+[17:32:19] WiFi listo para OTA
+[17:32:19] --- Verificando nueva versión ---
+[17:32:19] Version remota: 0
+[17:32:19] Versión actual: 1
+[17:32:20] Última versión: 0
+[17:32:20] Firmware ya actualizado
