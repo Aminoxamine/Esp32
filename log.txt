@@ -191,3 +191,12 @@
 [17:32:19] Versión actual: 1
 [17:32:20] Última versión: 0
 [17:32:20] Firmware ya actualizado
+[17:32:23] Logs subidos correctamente a GitHub
+[17:37:09] Intentando WiFi: HUAWEI-2.4G-m2gC
+[17:37:12] WiFi conectado: HUAWEI-2.4G-m2gC
+[17:37:12] IP: 192.168.18.192
+[17:37:12] --- Verificando nueva versión ---
+[17:37:13] Version remota: 0
+[17:37:13] Versión actual: 1
+[17:37:13] Última versión: 0
+[17:37:13] Firmware ya actualizado
