@@ -1,6 +1,1 @@
---------------------2026-03-13--------------------
-[21:56:48] === INICIANDO ESP32 v0 ===
-[21:56:48] [RESET] Motivo: Reset por software
-[21:56:48] [INFO] RAM libre: 275408 bytes
-[22:56:52] WiFi conectado
-[22:57:11] OTA completada. Reiniciando para validar...
+
