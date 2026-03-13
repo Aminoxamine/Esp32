@@ -1,1 +1,6 @@
-
+--------------------1970-01-01--------------------
+[00:00:12] === INICIANDO ESP32 v0 ===
+[00:00:12] [RESET] Motivo del ultimo reinicio: Encendido normal
+[00:00:12] [INFO] RAM libre al arrancar: 276056 bytes
+[01:00:30] WiFi conectado, iniciando ciclo OTA y logs
+[01:00:31] Firmware ya actualizado (v0)
