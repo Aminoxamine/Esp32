@@ -1,1 +1,2 @@
-
+--------------------2026-03-13--------------------
+[20:55:52] OTA descargada y verificada. Reiniciando para validar firmware...
