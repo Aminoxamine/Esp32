@@ -1,6 +1,1 @@
---------------------2026-03-13--------------------
-[20:23:47] === INICIANDO ESP32 v3 ===
-[20:23:47] [RESET] Motivo del ultimo reinicio: Reset por software (ESP.restart)
-[20:23:47] [INFO] RAM libre al arrancar: 275376 bytes
-[21:23:51] WiFi conectado, iniciando ciclo OTA y logs
-[21:24:05] OTA descargada y verificada. Reiniciando para validar firmware...
+
