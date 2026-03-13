@@ -5,12 +5,12 @@ on:
     paths:
       - 'log_pending.txt'
 
-permissions:
-  contents: write
 
 jobs:
   merge:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
