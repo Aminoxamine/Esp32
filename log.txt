@@ -1321,3 +1321,9 @@
 [20:26:05] [INFO] RAM libre al arrancar: 275376 bytes
 [21:26:10] WiFi conectado, iniciando ciclo OTA y logs
 [21:26:10] Firmware ya actualizado (v3)
+--------------------1970-01-01--------------------
+[00:00:02] === INICIANDO ESP32 v3 ===
+[00:00:02] [RESET] Motivo del ultimo reinicio: Encendido normal
+[00:00:02] [INFO] RAM libre al arrancar: 275392 bytes
+[01:00:16] WiFi conectado, iniciando ciclo OTA y logs
+[01:00:17] Firmware ya actualizado (v3)
