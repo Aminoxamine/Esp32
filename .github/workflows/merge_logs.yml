@@ -5,6 +5,9 @@ on:
     paths:
       - 'log_pending.txt'
 
+permissions:
+  contents: write
+
 jobs:
   merge:
     runs-on: ubuntu-latest
