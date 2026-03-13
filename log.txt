@@ -1,3 +1,11 @@
 [16:42:33] Firmware ya actualizado (v2)
 [16:47:33] Firmware ya actualizado (v2)
 [16:52:50] Firmware actualizado a v3. Reiniciando...
+--------------------2026-03-13--------------------
+[15:52:57] === INICIANDO ESP32 v3 ===
+[16:53:01] WiFi conectado, iniciando ciclo OTA y logs
+[16:53:02] Firmware ya actualizado (v3)
+--------------------2026-03-13--------------------
+[15:53:09] === INICIANDO ESP32 v3 ===
+[16:53:14] WiFi conectado, iniciando ciclo OTA y logs
+[16:53:14] Firmware ya actualizado (v3)
