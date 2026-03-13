@@ -1,6 +1,6 @@
 --------------------2026-03-13--------------------
-[16:49:18] === INICIANDO ESP32 v3 ===
-[16:49:18] [RESET] Motivo del ultimo reinicio: Watchdog de tarea
-[16:49:18] [INFO] RAM libre al arrancar: 275392 bytes
-[17:49:22] WiFi conectado, iniciando ciclo OTA y logs
-[17:49:35] OTA descargada y verificada. Reiniciando para validar firmware...
+[16:49:42] === INICIANDO ESP32 v3 ===
+[16:49:42] [RESET] Motivo del ultimo reinicio: Watchdog de tarea
+[16:49:42] [INFO] RAM libre al arrancar: 275392 bytes
+[17:49:46] WiFi conectado, iniciando ciclo OTA y logs
+[17:49:59] OTA descargada y verificada. Reiniciando para validar firmware...
