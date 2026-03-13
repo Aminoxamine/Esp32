@@ -50,3 +50,4 @@
 [16:42:00] [INFO] RAM libre al arrancar: 275392 bytes
 [17:42:04] WiFi conectado, iniciando ciclo OTA y logs
 [17:42:05] Firmware ya actualizado (v3)
+[17:47:11] OTA descargada y verificada. Reiniciando para validar firmware...
