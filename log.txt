@@ -1,2 +1,3 @@
 [16:42:33] Firmware ya actualizado (v2)
 [16:47:33] Firmware ya actualizado (v2)
+[16:52:50] Firmware actualizado a v3. Reiniciando...
