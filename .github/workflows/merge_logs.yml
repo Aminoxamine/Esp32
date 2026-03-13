@@ -1,0 +1,32 @@
+name: Merge ESP32 Logs
+
+on:
+  push:
+    paths:
+      - 'log_pending.txt'
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Append pending log to main log
+        run: |
+          if [ -f log_pending.txt ]; then
+            cat log_pending.txt >> log.txt
+          fi
+
+      - name: Clear log_pending.txt
+        run: echo "" > log_pending.txt
+
+      - name: Commit changes
+        run: |
+          git config user.name "ESP32 Bot"
+          git config user.email "esp32@bot.com"
+          git add log.txt log_pending.txt
+          git diff --staged --quiet || git commit -m "merge esp32 logs"
+          git push
