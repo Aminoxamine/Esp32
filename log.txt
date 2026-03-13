@@ -17,3 +17,4 @@
 [16:08:15] === INICIANDO ESP32 v3 ===
 [17:08:23] WiFi conectado, iniciando ciclo OTA y logs
 [17:08:24] Firmware ya actualizado (v3)
+[17:13:13] Firmware ya actualizado (v3)
