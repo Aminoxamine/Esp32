@@ -3,5 +3,5 @@
 [00:00:02] [RESET] Motivo del ultimo reinicio: Encendido normal
 [00:00:02] [INFO] RAM libre al arrancar: 275384 bytes
 --------------------2026-03-13--------------------
-[22:15:43] WiFi conectado, iniciando ciclo OTA y logs
-[22:15:44] Firmware ya actualizado (v0)
+[22:19:12] WiFi conectado, iniciando ciclo OTA y logs
+[22:19:13] Firmware ya actualizado (v0)
