@@ -1571,3 +1571,16 @@
 --------------------2026-03-14--------------------
 [12:28:31] WiFi conectado
 [12:28:32] Firmware actualizado (v0)
+--------------------1970-01-01--------------------
+[00:00:02] === INICIANDO ESP32 v0 ===
+[00:00:02] [RESET] Motivo: Encendido normal
+[00:00:02] [INFO] RAM libre: 275408 bytes
+--------------------2026-03-14--------------------
+[12:30:01] WiFi conectado
+[12:30:01] Firmware actualizado (v0)
+--------------------2026-03-14--------------------
+[11:30:09] === INICIANDO ESP32 v0 ===
+[11:30:09] [RESET] Motivo: Watchdog de tarea
+[11:30:09] [INFO] RAM libre: 275408 bytes
+[12:30:14] WiFi conectado
+[12:30:14] Firmware actualizado (v0)
