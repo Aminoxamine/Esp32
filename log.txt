@@ -226,3 +226,6 @@
 --------------------2026-03-15--------------------
 [00:35:24] [WEB] Dashboard en http://192.168.18.192
 [00:35:24] WiFi conectado. IP: 192.168.18.192
+[00:36:17] ERROR SENSOR: 3 lecturas fallidas consecutivas
+[00:37:47] ERROR SENSOR: 3 lecturas fallidas consecutivas
+[00:39:17] ERROR SENSOR: 3 lecturas fallidas consecutivas
