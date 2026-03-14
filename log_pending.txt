@@ -1,8 +1,1 @@
---------------------2026-03-14--------------------
-[23:23:40] === INICIANDO ESP32 v0 boot#10 ===
-[23:23:40] [RESET] Motivo: Reset por software
-[23:23:40] [INFO] RAM: 274792 bytes | Boot #10 | v0
---------------------2026-03-15--------------------
-[00:23:43] [WEB] Dashboard en http://192.168.18.192
-[00:23:43] WiFi conectado. IP: 192.168.18.192
-[00:23:57] OTA completada v6. Reiniciando...
+
