@@ -211,3 +211,11 @@
 [00:31:33] ERROR SENSOR: 3 lecturas fallidas consecutivas
 [00:33:03] ERROR SENSOR: 3 lecturas fallidas consecutivas
 [00:34:46] OTA completada v7. Reiniciando...
+--------------------2026-03-14--------------------
+[23:34:54] === INICIANDO ESP32 v0 boot#13 ===
+[23:34:54] [RESET] Motivo: Reset por software
+[23:34:54] [INFO] RAM: 274792 bytes | Boot #13 | v0
+--------------------2026-03-15--------------------
+[00:34:58] [WEB] Dashboard en http://192.168.18.192
+[00:34:58] WiFi conectado. IP: 192.168.18.192
+[00:35:12] OTA completada v7. Reiniciando...
