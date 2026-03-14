@@ -116,3 +116,4 @@
 [00:09:38] WiFi conectado
 [00:09:38] Firmware actualizado (v0)
 [00:14:29] Firmware actualizado (v0)
+[00:19:42] OTA completada. Reiniciando para validar...
