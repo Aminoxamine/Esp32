@@ -197,3 +197,10 @@
 [00:23:43] [WEB] Dashboard en http://192.168.18.192
 [00:23:43] WiFi conectado. IP: 192.168.18.192
 [00:23:57] OTA completada v6. Reiniciando...
+--------------------2026-03-14--------------------
+[23:24:32] === INICIANDO ESP32 v0 boot#12 ===
+[23:24:32] [RESET] Motivo: Reset por software
+[23:24:32] [INFO] RAM: 274792 bytes | Boot #12 | v0
+--------------------2026-03-15--------------------
+[00:24:36] [WEB] Dashboard en http://192.168.18.192
+[00:24:36] WiFi conectado. IP: 192.168.18.192
