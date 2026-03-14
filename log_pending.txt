@@ -1,11 +1,1 @@
---------------------2026-03-13--------------------
-[21:59:03] === INICIANDO ESP32 v0 ===
-[21:59:03] [RESET] Motivo: Reset por software
-[21:59:03] [INFO] RAM libre: 275260 bytes
-[22:59:10] WiFi conectado
---------------------1970-01-01--------------------
-[00:00:02] === INICIANDO ESP32 v0 ===
-[00:00:02] [RESET] Motivo: Reset por software
-[00:00:02] [INFO] RAM libre: 275260 bytes
-[01:00:16] WiFi conectado
-[01:00:17] Firmware actualizado (v0)
+
