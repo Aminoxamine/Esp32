@@ -1,11 +1,1 @@
-[17:04:38] ERROR SENSOR: fallo persistente
-[17:06:08] ERROR SENSOR: fallo persistente
-[17:07:38] ERROR SENSOR: fallo persistente
-[17:09:08] ERROR SENSOR: fallo persistente
---------------------2026-03-15--------------------
-[16:10:13] === INICIANDO v8 boot#18 ===
-[16:10:13] [RESET] Watchdog tarea
-[16:10:13] [INFO] RAM:274956b Boot#18 v8
-[17:10:16] [WEB] Dashboard en http://192.168.18.192
-[17:10:16] WiFi OK. IP: 192.168.18.192
-[17:10:26] OTA completada v9. Reiniciando...
+
