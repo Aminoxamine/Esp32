@@ -1,1 +1,4 @@
-
+[17:43:18] ERROR SENSOR: fallo persistente
+[17:44:48] ERROR SENSOR: fallo persistente
+[17:46:18] ERROR SENSOR: fallo persistente
+[17:47:56] OTA completada v10. Reiniciando...
