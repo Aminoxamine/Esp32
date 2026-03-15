@@ -1,4 +1,1 @@
-[16:29:08] ERROR SENSOR: 3 lecturas fallidas consecutivas
-[16:30:38] ERROR SENSOR: 3 lecturas fallidas consecutivas
-[16:32:08] ERROR SENSOR: 3 lecturas fallidas consecutivas
-[16:33:38] ERROR SENSOR: 3 lecturas fallidas consecutivas
+
