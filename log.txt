@@ -291,3 +291,6 @@
 [16:32:48] [INFO] RAM:274956b Boot#20 v9
 [17:32:52] [WEB] Dashboard en http://192.168.18.192
 [17:32:52] WiFi OK. IP: 192.168.18.192
+[17:34:15] ERROR SENSOR: fallo persistente
+[17:35:45] ERROR SENSOR: fallo persistente
+[17:37:15] ERROR SENSOR: fallo persistente
