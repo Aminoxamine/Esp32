@@ -1,1 +1,3 @@
-
+[17:12:04] ERROR SENSOR: fallo persistente
+[17:13:34] ERROR SENSOR: fallo persistente
+[17:15:04] ERROR SENSOR: fallo persistente
