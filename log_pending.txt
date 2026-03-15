@@ -1,1 +1,7 @@
-
+[17:31:39] ERROR SENSOR: fallo persistente
+--------------------2026-03-15--------------------
+[16:32:48] === INICIANDO v9 boot#20 ===
+[16:32:48] [RESET] Brownout
+[16:32:48] [INFO] RAM:274956b Boot#20 v9
+[17:32:52] [WEB] Dashboard en http://192.168.18.192
+[17:32:52] WiFi OK. IP: 192.168.18.192
