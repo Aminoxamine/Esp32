@@ -1,1 +1,5 @@
-
+[16:44:08] ERROR SENSOR: 3 lecturas fallidas consecutivas
+[16:45:38] ERROR SENSOR: 3 lecturas fallidas consecutivas
+[16:47:08] ERROR SENSOR: 3 lecturas fallidas consecutivas
+[16:48:38] ERROR SENSOR: 3 lecturas fallidas consecutivas
+[16:49:25] OTA completada v8. Reiniciando...
