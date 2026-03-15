@@ -221,3 +221,6 @@
 [16:20:00] ERROR SENSOR: 3 lecturas fallidas consecutivas
 [16:21:30] ERROR SENSOR: 3 lecturas fallidas consecutivas
 [16:23:00] ERROR SENSOR: 3 lecturas fallidas consecutivas
+[16:24:38] ERROR SENSOR: 3 lecturas fallidas consecutivas
+[16:26:08] ERROR SENSOR: 3 lecturas fallidas consecutivas
+[16:27:38] ERROR SENSOR: 3 lecturas fallidas consecutivas
