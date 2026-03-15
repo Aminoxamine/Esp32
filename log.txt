@@ -280,3 +280,7 @@
 [17:21:09] ERROR SENSOR: fallo persistente
 [17:22:39] ERROR SENSOR: fallo persistente
 [17:24:09] ERROR SENSOR: fallo persistente
+[17:25:39] ERROR SENSOR: fallo persistente
+[17:27:09] ERROR SENSOR: fallo persistente
+[17:28:39] ERROR SENSOR: fallo persistente
+[17:30:09] ERROR SENSOR: fallo persistente
