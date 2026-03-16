@@ -1,8 +1,1 @@
-[12:46:41] ERROR SENSOR: fallo persistente
---------------------1970-01-01--------------------
-[00:00:01] [RESET] Encendido normal
-[00:00:01] [INFO] RAM:274924b Boot#1 v0
---------------------2026-03-16--------------------
-[12:48:57] ERROR SENSOR: fallo persistente
-[12:50:42] ERROR SENSOR: fallo persistente
-[12:52:38] OTA completada v10. Reiniciando...
+
