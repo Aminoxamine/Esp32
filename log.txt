@@ -538,3 +538,6 @@ wnout
 --------------------2026-03-16--------------------
 [12:36:33] [WEB] Dashboard en http://10.106.156.118
 [12:36:33] WiFi OK. IP: 10.106.156.118
+[12:37:41] ERROR SENSOR: fallo persistente
+[12:39:11] ERROR SENSOR: fallo persistente
+[12:40:41] ERROR SENSOR: fallo persistente
