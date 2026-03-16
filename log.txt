@@ -564,3 +564,11 @@ wnout
 [11:53:32] [INFO] RAM:274956b Boot#119 v10
 [12:54:04] [WEB] Dashboard en http://10.106.156.118
 [12:54:04] WiFi OK. IP: 10.106.156.118
+[12:55:12] ERROR SENSOR: fallo persistente
+--------------------1970-01-01--------------------
+[00:00:01] === INICIANDO v10 boot#120 ===
+[00:00:01] [RESET] Encendido normal
+[00:00:01] [INFO] RAM:274956b Boot#120 v10
+--------------------2026-03-16--------------------
+[12:56:45] [WEB] Dashboard en http://10.106.156.118
+[12:56:45] WiFi OK. IP: 10.106.156.118
