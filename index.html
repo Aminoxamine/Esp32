@@ -17,10 +17,9 @@
     --muted: #6b7280;
     --accent-temp: #f97316;
     --accent-hum: #38bdf8;
-    --accent-temp-dim: rgba(249,115,22,0.12);
-    --accent-hum-dim: rgba(56,189,248,0.12);
     --green: #4ade80;
     --red: #f87171;
+    --amber: #fbbf24;
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -31,11 +30,31 @@
     color: var(--text);
     min-height: 100vh;
     padding: 2rem 1.5rem 4rem;
+    transition: background 0.4s;
   }
+
+  body.alert-hot  { background: #1a0e08; }
+  body.alert-cold { background: #08101a; }
+
+  .alert-banner {
+    display: none;
+    max-width: 860px;
+    margin: 0 auto 1.5rem;
+    border-radius: 12px;
+    padding: 1rem 1.5rem;
+    font-family: 'DM Mono', monospace;
+    font-size: 13px;
+    align-items: center;
+    gap: 12px;
+  }
+  .alert-banner.show { display: flex; }
+  .alert-banner.hot  { background: rgba(249,115,22,0.12); border: 1px solid rgba(249,115,22,0.3); color: #fb923c; }
+  .alert-banner.cold { background: rgba(56,189,248,0.12); border: 1px solid rgba(56,189,248,0.3);  color: #38bdf8; }
+  .alert-icon { font-size: 16px; }
 
   header {
     max-width: 860px;
-    margin: 0 auto 3rem;
+    margin: 0 auto 2rem;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
@@ -45,220 +64,116 @@
     padding-bottom: 1.5rem;
   }
 
-  .logo {
-    font-family: 'DM Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.15em;
-    color: var(--muted);
-    text-transform: uppercase;
-    margin-bottom: 6px;
-  }
-
-  header h1 {
-    font-size: 26px;
-    font-weight: 300;
-    letter-spacing: -0.02em;
-    color: var(--text);
-  }
-
+  .logo { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.15em; color: var(--muted); text-transform: uppercase; margin-bottom: 6px; }
+  header h1 { font-size: 26px; font-weight: 300; letter-spacing: -0.02em; color: var(--text); }
   header h1 span { font-weight: 500; }
 
   .status-pill {
-    display: flex;
-    align-items: center;
-    gap: 7px;
-    font-size: 12px;
-    font-family: 'DM Mono', monospace;
-    color: var(--muted);
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 999px;
-    padding: 6px 14px;
+    display: flex; align-items: center; gap: 7px;
+    font-size: 12px; font-family: 'DM Mono', monospace; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 999px; padding: 6px 14px;
   }
 
-  .dot {
-    width: 7px; height: 7px;
-    border-radius: 50%;
-    background: var(--muted);
-    flex-shrink: 0;
-  }
-  .dot.ok { background: var(--green); box-shadow: 0 0 6px var(--green); animation: pulse 2s infinite; }
+  .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--muted); flex-shrink: 0; }
+  .dot.ok  { background: var(--green); box-shadow: 0 0 6px var(--green); animation: pulse 2s infinite; }
   .dot.err { background: var(--red); }
-
-  @keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.4; }
-  }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
 
   main { max-width: 860px; margin: 0 auto; }
 
-  .big-cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-    margin-bottom: 16px;
-  }
+  .big-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
 
   .big-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 2rem;
-    position: relative;
-    overflow: hidden;
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 16px; padding: 2rem; position: relative; overflow: hidden;
+    transition: border-color 0.4s;
   }
-
   .big-card::before {
-    content: '';
-    position: absolute;
-    top: -40px; right: -40px;
-    width: 120px; height: 120px;
-    border-radius: 50%;
-    opacity: 0.08;
+    content: ''; position: absolute; top: -40px; right: -40px;
+    width: 120px; height: 120px; border-radius: 50%; opacity: 0.08;
   }
-
   .big-card.temp::before { background: var(--accent-temp); }
-  .big-card.hum::before { background: var(--accent-hum); }
+  .big-card.hum::before  { background: var(--accent-hum); }
+  .big-card.alert-hot-card  { border-color: rgba(249,115,22,0.4); }
+  .big-card.alert-cold-card { border-color: rgba(56,189,248,0.4); }
 
-  .card-label {
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: 1rem;
-  }
-
-  .card-value {
-    font-size: 56px;
-    font-weight: 300;
-    letter-spacing: -0.04em;
-    line-height: 1;
-  }
-
+  .card-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 1rem; }
+  .card-value { font-size: 56px; font-weight: 300; letter-spacing: -0.04em; line-height: 1; }
   .big-card.temp .card-value { color: var(--accent-temp); }
-  .big-card.hum .card-value { color: var(--accent-hum); }
+  .big-card.hum  .card-value { color: var(--accent-hum); }
+  .card-unit { font-size: 20px; font-weight: 400; opacity: 0.6; margin-left: 4px; }
 
-  .card-unit {
-    font-size: 20px;
-    font-weight: 400;
-    opacity: 0.6;
-    margin-left: 4px;
+  .card-bottom { margin-top: 1rem; display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap; }
+  .card-sub { font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; }
+
+  .trend {
+    display: flex; align-items: center; gap: 5px;
+    font-family: 'DM Mono', monospace; font-size: 12px;
+    padding: 3px 10px; border-radius: 999px; border: 1px solid var(--border);
   }
+  .trend.up   { color: #f87171; border-color: rgba(248,113,113,0.3); }
+  .trend.down { color: #38bdf8; border-color: rgba(56,189,248,0.3); }
+  .trend.flat { color: var(--muted); }
+  .trend-arrow { font-size: 14px; line-height: 1; }
 
-  .card-sub {
-    margin-top: 1rem;
-    font-size: 12px;
-    color: var(--muted);
-    font-family: 'DM Mono', monospace;
-  }
+  .stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 16px; }
+  .stat-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.1rem 1.25rem; }
+  .stat-card .card-label { margin-bottom: 4px; }
+  .stat-val { font-family: 'DM Mono', monospace; font-size: 16px; font-weight: 500; color: var(--text); }
+  .stat-val.hot  { color: #f97316; }
+  .stat-val.cold { color: #38bdf8; }
 
-  .meta-row {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
-    margin-bottom: 16px;
-  }
-
-  .meta-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 1.25rem 1.5rem;
-  }
-
+  .meta-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 16px; }
+  .meta-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.25rem 1.5rem; }
   .meta-card .card-label { margin-bottom: 6px; }
+  .meta-val { font-family: 'DM Mono', monospace; font-size: 18px; font-weight: 500; color: var(--text); }
 
-  .meta-val {
-    font-family: 'DM Mono', monospace;
-    font-size: 18px;
-    font-weight: 500;
-    color: var(--text);
-  }
+  .chart-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 1.75rem 2rem; margin-bottom: 16px; }
+  .chart-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.25rem; flex-wrap: wrap; gap: 12px; }
+  .chart-title { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+  .chart-stats { font-size: 11px; color: var(--muted); font-family: 'DM Mono', monospace; }
 
-  .chart-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 1.75rem 2rem;
-    margin-bottom: 16px;
+  .range-selector { display: flex; gap: 6px; }
+  .range-btn {
+    font-family: 'DM Mono', monospace; font-size: 11px;
+    padding: 4px 10px; border-radius: 6px;
+    border: 1px solid var(--border); background: transparent;
+    color: var(--muted); cursor: pointer; transition: all 0.15s;
   }
-
-  .chart-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 1.5rem;
-  }
-
-  .chart-title {
-    font-family: 'DM Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--muted);
-  }
-
-  .chart-range {
-    font-size: 11px;
-    color: var(--muted);
-    font-family: 'DM Mono', monospace;
-  }
+  .range-btn:hover { color: var(--text); border-color: rgba(255,255,255,0.2); }
+  .range-btn.active { background: var(--surface2); color: var(--text); border-color: rgba(255,255,255,0.2); }
 
   .chart-wrap { height: 180px; }
 
-  .loading-state {
-    text-align: center;
-    padding: 4rem 0;
-    color: var(--muted);
-    font-family: 'DM Mono', monospace;
-    font-size: 13px;
-  }
-
-  .spinner {
-    width: 20px; height: 20px;
-    border: 2px solid var(--border);
-    border-top-color: var(--muted);
-    border-radius: 50%;
-    animation: spin 0.8s linear infinite;
-    margin: 0 auto 1rem;
-  }
-
+  .loading-state { text-align: center; padding: 4rem 0; color: var(--muted); font-family: 'DM Mono', monospace; font-size: 13px; }
+  .spinner { width: 20px; height: 20px; border: 2px solid var(--border); border-top-color: var(--muted); border-radius: 50%; animation: spin 0.8s linear infinite; margin: 0 auto 1rem; }
   @keyframes spin { to { transform: rotate(360deg); } }
-
-  .error-state {
-    text-align: center;
-    padding: 4rem 0;
-    color: var(--red);
-    font-family: 'DM Mono', monospace;
-    font-size: 13px;
-  }
+  .error-state { text-align: center; padding: 4rem 0; color: var(--red); font-family: 'DM Mono', monospace; font-size: 13px; }
 
   footer {
-    max-width: 860px;
-    margin: 3rem auto 0;
-    font-size: 11px;
-    font-family: 'DM Mono', monospace;
-    color: var(--muted);
-    display: flex;
-    justify-content: space-between;
-    gap: 1rem;
-    flex-wrap: wrap;
-    border-top: 1px solid var(--border);
-    padding-top: 1.5rem;
+    max-width: 860px; margin: 3rem auto 0;
+    font-size: 11px; font-family: 'DM Mono', monospace; color: var(--muted);
+    display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+    border-top: 1px solid var(--border); padding-top: 1.5rem;
   }
-
   footer a { color: var(--muted); text-decoration: none; }
   footer a:hover { color: var(--text); }
 
   @media (max-width: 600px) {
-    .big-cards { grid-template-columns: 1fr; }
-    .meta-row { grid-template-columns: 1fr 1fr; }
+    .big-cards  { grid-template-columns: 1fr; }
+    .stats-row  { grid-template-columns: 1fr 1fr; }
+    .meta-row   { grid-template-columns: 1fr 1fr; }
     .card-value { font-size: 44px; }
   }
 </style>
 </head>
 <body>
+
+<div class="alert-banner" id="alert-banner">
+  <span class="alert-icon" id="alert-icon"></span>
+  <span id="alert-text"></span>
+</div>
 
 <header>
   <div>
@@ -280,15 +195,40 @@
   <div id="content" style="display:none">
 
     <div class="big-cards">
-      <div class="big-card temp">
+      <div class="big-card temp" id="card-temp">
         <div class="card-label">temperatura</div>
         <div class="card-value" id="val-temp">--<span class="card-unit">°C</span></div>
-        <div class="card-sub" id="sub-temp"></div>
+        <div class="card-bottom">
+          <div class="card-sub" id="sub-temp"></div>
+          <div class="trend" id="trend-temp"></div>
+        </div>
       </div>
-      <div class="big-card hum">
+      <div class="big-card hum" id="card-hum">
         <div class="card-label">humedad relativa</div>
         <div class="card-value" id="val-hum">--<span class="card-unit">%</span></div>
-        <div class="card-sub" id="sub-hum"></div>
+        <div class="card-bottom">
+          <div class="card-sub" id="sub-hum"></div>
+          <div class="trend" id="trend-hum"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat-card">
+        <div class="card-label">temp. mínima</div>
+        <div class="stat-val cold" id="stat-tmin">--</div>
+      </div>
+      <div class="stat-card">
+        <div class="card-label">temp. máxima</div>
+        <div class="stat-val hot" id="stat-tmax">--</div>
+      </div>
+      <div class="stat-card">
+        <div class="card-label">temp. media</div>
+        <div class="stat-val" id="stat-tavg">--</div>
+      </div>
+      <div class="stat-card">
+        <div class="card-label">hum. media</div>
+        <div class="stat-val" id="stat-havg">--</div>
       </div>
     </div>
 
@@ -298,7 +238,7 @@
         <div class="meta-val" id="meta-ts">--</div>
       </div>
       <div class="meta-card">
-        <div class="card-label">lecturas (24h)</div>
+        <div class="card-label">lecturas totales</div>
         <div class="meta-val" id="meta-count">--</div>
       </div>
       <div class="meta-card">
@@ -309,16 +249,32 @@
 
     <div class="chart-card">
       <div class="chart-header">
-        <div class="chart-title">temperatura · últimas 24h</div>
-        <div class="chart-range" id="range-temp"></div>
+        <div>
+          <div class="chart-title">temperatura</div>
+          <div class="chart-stats" id="range-temp"></div>
+        </div>
+        <div class="range-selector">
+          <button class="range-btn" data-h="1"  data-chart="temp">1h</button>
+          <button class="range-btn" data-h="6"  data-chart="temp">6h</button>
+          <button class="range-btn" data-h="12" data-chart="temp">12h</button>
+          <button class="range-btn active" data-h="24" data-chart="temp">24h</button>
+        </div>
       </div>
       <div class="chart-wrap"><canvas id="chart-temp"></canvas></div>
     </div>
 
     <div class="chart-card">
       <div class="chart-header">
-        <div class="chart-title">humedad · últimas 24h</div>
-        <div class="chart-range" id="range-hum"></div>
+        <div>
+          <div class="chart-title">humedad</div>
+          <div class="chart-stats" id="range-hum"></div>
+        </div>
+        <div class="range-selector">
+          <button class="range-btn" data-h="1"  data-chart="hum">1h</button>
+          <button class="range-btn" data-h="6"  data-chart="hum">6h</button>
+          <button class="range-btn" data-h="12" data-chart="hum">12h</button>
+          <button class="range-btn active" data-h="24" data-chart="hum">24h</button>
+        </div>
       </div>
       <div class="chart-wrap"><canvas id="chart-hum"></canvas></div>
     </div>
@@ -331,17 +287,25 @@
 </main>
 
 <footer>
-  <span>github.com/Aminoxamine/Esp32</span>
+  <span><a href="https://github.com/Aminoxamine/Esp32" target="_blank">github.com/Aminoxamine/Esp32</a></span>
   <span id="footer-updated"></span>
 </footer>
 
 <script>
-const DATA_URL = "https://raw.githubusercontent.com/Aminoxamine/Esp32/main/data.json";
+const DATA_URL   = "https://raw.githubusercontent.com/Aminoxamine/Esp32/main/data.json";
+const ALERT_HOT  = 25;
+const ALERT_COLD = 15;
+
+let allData = [];
+let chartTemp = null;
+let chartHum  = null;
+let activeHoursTemp = 24;
+let activeHoursHum  = 24;
 
 function parseLocal(isoStr) {
   const [date, time] = isoStr.split('T');
-  const [y, mo, d] = date.split('-').map(Number);
-  const [h, mi, s] = time.split(':').map(Number);
+  const [y, mo, d]   = date.split('-').map(Number);
+  const [h, mi, s]   = time.split(':').map(Number);
   return new Date(y, mo - 1, d, h, mi, s || 0);
 }
 
@@ -352,24 +316,58 @@ function fmtTime(isoStr) {
 
 function fmtDateTime(isoStr) {
   const d = parseLocal(isoStr);
-  return d.toLocaleDateString('es-ES', {day:'2-digit',month:'short'}) + ' ' +
+  return d.toLocaleDateString('es-ES', {day:'2-digit', month:'short'}) + ' ' +
          d.getHours().toString().padStart(2,'0') + ':' + d.getMinutes().toString().padStart(2,'0');
 }
 
-function makeChart(id, labels, data, color, dimColor, unit, minY, maxY) {
+function filterByHours(data, hours) {
+  if (!data.length) return data;
+  const last   = parseLocal(data[data.length - 1].ts).getTime();
+  const cutoff = last - hours * 3600 * 1000;
+  return data.filter(d => parseLocal(d.ts).getTime() >= cutoff);
+}
+
+function avg(arr) { return arr.reduce((a, b) => a + b, 0) / arr.length; }
+
+function getTrend(data, field, minutes) {
+  if (data.length < 2) return null;
+  const last   = parseLocal(data[data.length - 1].ts).getTime();
+  const cutoff = last - minutes * 60 * 1000;
+  const recent = data.filter(d => parseLocal(d.ts).getTime() >= cutoff);
+  if (recent.length < 2) return null;
+  return recent[recent.length - 1][field] - recent[0][field];
+}
+
+function renderTrend(elId, diff, unit) {
+  const el = document.getElementById(elId);
+  if (diff === null) { el.innerHTML = ''; return; }
+  const abs = Math.abs(diff).toFixed(1);
+  if (Math.abs(diff) < 0.3) {
+    el.className = 'trend flat';
+    el.innerHTML = '<span class="trend-arrow">&#8594;</span> estable';
+  } else if (diff > 0) {
+    el.className = 'trend up';
+    el.innerHTML = '<span class="trend-arrow">&#8593;</span> +' + abs + unit;
+  } else {
+    el.className = 'trend down';
+    el.innerHTML = '<span class="trend-arrow">&#8595;</span> -' + abs + unit;
+  }
+}
+
+function makeChart(id, labels, values, color, dimColor, unit, minY, maxY) {
   const ctx = document.getElementById(id).getContext('2d');
   return new Chart(ctx, {
     type: 'line',
     data: {
       labels,
       datasets: [{
-        data,
+        data: values,
         borderColor: color,
         backgroundColor: dimColor,
         fill: true,
         borderWidth: 1.5,
         tension: 0.4,
-        pointRadius: data.length > 80 ? 0 : 2,
+        pointRadius: values.length > 80 ? 0 : 2,
         pointHoverRadius: 4,
         pointBackgroundColor: color,
       }]
@@ -389,35 +387,157 @@ function makeChart(id, labels, data, color, dimColor, unit, minY, maxY) {
           titleFont: { family: 'DM Mono', size: 11 },
           bodyFont: { family: 'DM Mono', size: 13 },
           padding: 10,
-          callbacks: {
-            label: ctx => `${ctx.parsed.y.toFixed(1)} ${unit}`
-          }
+          callbacks: { label: ctx => ctx.parsed.y.toFixed(1) + ' ' + unit }
         }
       },
       scales: {
         x: {
-          ticks: {
-            maxTicksLimit: 8,
-            color: '#6b7280',
-            font: { family: 'DM Mono', size: 10 },
-          },
+          ticks: { maxTicksLimit: 8, color: '#6b7280', font: { family: 'DM Mono', size: 10 } },
           grid: { color: 'rgba(255,255,255,0.04)' },
           border: { color: 'transparent' }
         },
         y: {
-          min: minY,
-          max: maxY,
-          ticks: {
-            color: '#6b7280',
-            font: { family: 'DM Mono', size: 10 },
-            callback: v => v.toFixed(0) + ' ' + unit
-          },
+          min: minY, max: maxY,
+          ticks: { color: '#6b7280', font: { family: 'DM Mono', size: 10 }, callback: v => v.toFixed(0) + ' ' + unit },
           grid: { color: 'rgba(255,255,255,0.04)' },
           border: { color: 'transparent' }
         }
       }
     }
   });
+}
+
+function updateChart(chartObj, filtered, unit) {
+  const labels = filtered.map(d => fmtTime(d.ts));
+  const values = filtered.map(d => unit === '°C' ? d.t : d.h);
+  chartObj.data.labels = labels;
+  chartObj.data.datasets[0].data = values;
+  chartObj.data.datasets[0].pointRadius = values.length > 80 ? 0 : 2;
+  const mn = Math.min(...values), mx = Math.max(...values);
+  const pad = Math.max(unit === '°C' ? 1 : 2, (mx - mn) * 0.2);
+  chartObj.options.scales.y.min = unit === '%' ? Math.max(0, parseFloat((mn - pad).toFixed(1))) : parseFloat((mn - pad).toFixed(1));
+  chartObj.options.scales.y.max = unit === '%' ? Math.min(100, parseFloat((mx + pad).toFixed(1))) : parseFloat((mx + pad).toFixed(1));
+  chartObj.update();
+}
+
+function updateRangeStats(elId, filtered, unit) {
+  if (!filtered.length) return;
+  const vals = filtered.map(d => unit === '°C' ? d.t : d.h);
+  const mn = Math.min(...vals), mx = Math.max(...vals);
+  document.getElementById(elId).textContent =
+    mn.toFixed(1) + unit + ' – ' + mx.toFixed(1) + unit + ' · ' + filtered.length + ' lecturas';
+}
+
+function checkAlerts(temp) {
+  const banner = document.getElementById('alert-banner');
+  const body   = document.body;
+  const cardT  = document.getElementById('card-temp');
+
+  body.classList.remove('alert-hot', 'alert-cold');
+  cardT.classList.remove('alert-hot-card', 'alert-cold-card');
+  banner.classList.remove('show', 'hot', 'cold');
+
+  if (temp > ALERT_HOT) {
+    body.classList.add('alert-hot');
+    cardT.classList.add('alert-hot-card');
+    banner.classList.add('show', 'hot');
+    document.getElementById('alert-icon').textContent = '&#9650;';
+    document.getElementById('alert-text').textContent =
+      'temperatura alta: ' + temp.toFixed(1) + '°C — supera el umbral de ' + ALERT_HOT + '°C';
+  } else if (temp < ALERT_COLD) {
+    body.classList.add('alert-cold');
+    cardT.classList.add('alert-cold-card');
+    banner.classList.add('show', 'cold');
+    document.getElementById('alert-icon').textContent = '&#9660;';
+    document.getElementById('alert-text').textContent =
+      'temperatura baja: ' + temp.toFixed(1) + '°C — por debajo del umbral de ' + ALERT_COLD + '°C';
+  }
+}
+
+function setupRangeButtons() {
+  document.querySelectorAll('.range-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const hours = parseInt(btn.dataset.h);
+      const chart = btn.dataset.chart;
+      btn.closest('.range-selector').querySelectorAll('.range-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filtered = filterByHours(allData, hours);
+      if (chart === 'temp') {
+        activeHoursTemp = hours;
+        updateChart(chartTemp, filtered, '°C');
+        updateRangeStats('range-temp', filtered, '°C');
+      } else {
+        activeHoursHum = hours;
+        updateChart(chartHum, filtered, '%');
+        updateRangeStats('range-hum', filtered, '%');
+      }
+    });
+  });
+}
+
+function render(data) {
+  allData = data;
+  const last  = data[data.length - 1];
+  const temps = data.map(d => d.t);
+  const hums  = data.map(d => d.h);
+
+  document.getElementById('val-temp').innerHTML = last.t.toFixed(1) + '<span class="card-unit">°C</span>';
+  document.getElementById('val-hum').innerHTML  = last.h.toFixed(1) + '<span class="card-unit">%</span>';
+
+  const minT = Math.min(...temps), maxT = Math.max(...temps);
+  const minH = Math.min(...hums),  maxH = Math.max(...hums);
+  const avgT = avg(temps), avgH = avg(hums);
+
+  document.getElementById('sub-temp').textContent = 'mín ' + minT.toFixed(1) + '° · máx ' + maxT.toFixed(1) + '°';
+  document.getElementById('sub-hum').textContent  = 'mín ' + minH.toFixed(1) + '% · máx ' + maxH.toFixed(1) + '%';
+
+  document.getElementById('stat-tmin').textContent = minT.toFixed(1) + '°C';
+  document.getElementById('stat-tmax').textContent = maxT.toFixed(1) + '°C';
+  document.getElementById('stat-tavg').textContent = avgT.toFixed(1) + '°C';
+  document.getElementById('stat-havg').textContent = avgH.toFixed(1) + '%';
+
+  document.getElementById('meta-ts').textContent    = fmtDateTime(last.ts);
+  document.getElementById('meta-count').textContent = data.length;
+  document.getElementById('meta-range').textContent = minT.toFixed(1) + '–' + maxT.toFixed(1) + '°';
+  document.getElementById('footer-updated').textContent = 'actualizado ' + fmtDateTime(last.ts);
+
+  renderTrend('trend-temp', getTrend(data, 't', 60), '°C');
+  renderTrend('trend-hum',  getTrend(data, 'h', 60), '%');
+
+  const dot = document.getElementById('status-dot');
+  const ago = (Date.now() - parseLocal(last.ts).getTime()) / 60000;
+  if (ago < 15) { dot.className = 'dot ok'; document.getElementById('status-text').textContent = 'en línea'; }
+  else          { dot.className = 'dot err'; document.getElementById('status-text').textContent = 'sin datos recientes'; }
+
+  checkAlerts(last.t);
+
+  const filtT = filterByHours(data, activeHoursTemp);
+  const filtH = filterByHours(data, activeHoursHum);
+  const labT  = filtT.map(d => fmtTime(d.ts));
+  const labH  = filtH.map(d => fmtTime(d.ts));
+  const valT  = filtT.map(d => d.t);
+  const valH  = filtH.map(d => d.h);
+  const padT  = Math.max(1, (Math.max(...valT) - Math.min(...valT)) * 0.2);
+  const padH  = Math.max(2, (Math.max(...valH) - Math.min(...valH)) * 0.2);
+
+  if (chartTemp) {
+    updateChart(chartTemp, filtT, '°C');
+  } else {
+    chartTemp = makeChart('chart-temp', labT, valT, '#f97316', 'rgba(249,115,22,0.08)', '°C',
+      parseFloat((Math.min(...valT) - padT).toFixed(1)),
+      parseFloat((Math.max(...valT) + padT).toFixed(1)));
+  }
+
+  if (chartHum) {
+    updateChart(chartHum, filtH, '%');
+  } else {
+    chartHum = makeChart('chart-hum', labH, valH, '#38bdf8', 'rgba(56,189,248,0.08)', '%',
+      Math.max(0,   parseFloat((Math.min(...valH) - padH).toFixed(1))),
+      Math.min(100, parseFloat((Math.max(...valH) + padH).toFixed(1))));
+  }
+
+  updateRangeStats('range-temp', filtT, '°C');
+  updateRangeStats('range-hum',  filtH, '%');
 }
 
 async function load() {
@@ -427,55 +547,25 @@ async function load() {
     const data = await r.json();
 
     if (!Array.isArray(data) || data.length === 0) {
-      document.getElementById('loading-state').innerHTML = '<div style="padding:4rem 0;color:var(--muted);font-family:DM Mono,monospace;font-size:13px">sin datos todavía</div>';
+      document.getElementById('loading-state').innerHTML =
+        '<div style="padding:4rem 0;color:var(--muted);font-family:DM Mono,monospace;font-size:13px">sin datos todavía</div>';
       return;
     }
 
-    const last = data[data.length - 1];
-    const temps = data.map(d => d.t);
-    const hums  = data.map(d => d.h);
-    const labels = data.map(d => fmtTime(d.ts));
-
-    const minT = Math.min(...temps), maxT = Math.max(...temps);
-    const minH = Math.min(...hums),  maxH = Math.max(...hums);
-    const padT = Math.max(1, (maxT - minT) * 0.2);
-    const padH = Math.max(2, (maxH - minH) * 0.2);
-
-    document.getElementById('val-temp').innerHTML = last.t.toFixed(1) + '<span class="card-unit">°C</span>';
-    document.getElementById('val-hum').innerHTML  = last.h.toFixed(1) + '<span class="card-unit">%</span>';
-    document.getElementById('sub-temp').textContent = 'mín ' + minT.toFixed(1) + '° · máx ' + maxT.toFixed(1) + '°';
-    document.getElementById('sub-hum').textContent  = 'mín ' + minH.toFixed(1) + '% · máx ' + maxH.toFixed(1) + '%';
-    document.getElementById('meta-ts').textContent    = fmtDateTime(last.ts);
-    document.getElementById('meta-count').textContent = data.length;
-    document.getElementById('meta-range').textContent = minT.toFixed(1) + '–' + maxT.toFixed(1) + '°';
-    document.getElementById('range-temp').textContent = minT.toFixed(1) + '° – ' + maxT.toFixed(1) + '°';
-    document.getElementById('range-hum').textContent  = minH.toFixed(1) + '% – ' + maxH.toFixed(1) + '%';
-    document.getElementById('footer-updated').textContent = 'actualizado ' + fmtDateTime(last.ts);
-
-    const dot = document.getElementById('status-dot');
-    const ago = (Date.now() - new Date(last.ts)) / 60000;
-    if (ago < 15) { dot.className = 'dot ok'; document.getElementById('status-text').textContent = 'en línea'; }
-    else          { dot.className = 'dot err'; document.getElementById('status-text').textContent = 'sin datos recientes'; }
-
     document.getElementById('loading-state').style.display = 'none';
     document.getElementById('content').style.display = 'block';
-
-    makeChart('chart-temp', labels, temps, '#f97316', 'rgba(249,115,22,0.08)', '°C',
-              parseFloat((minT - padT).toFixed(1)), parseFloat((maxT + padT).toFixed(1)));
-    makeChart('chart-hum',  labels, hums,  '#38bdf8', 'rgba(56,189,248,0.08)',  '%',
-              Math.max(0, parseFloat((minH - padH).toFixed(1))),
-              Math.min(100, parseFloat((maxH + padH).toFixed(1))));
+    render(data);
 
   } catch(e) {
     document.getElementById('loading-state').style.display = 'none';
     document.getElementById('error-state').style.display = 'block';
-    const dot = document.getElementById('status-dot');
-    dot.className = 'dot err';
+    document.getElementById('status-dot').className = 'dot err';
     document.getElementById('status-text').textContent = 'error';
     console.error(e);
   }
 }
 
+setupRangeButtons();
 load();
 setInterval(load, 5 * 60 * 1000);
 </script>
