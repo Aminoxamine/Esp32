@@ -1,1 +1,476 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Estación Meteorológica</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+  :root {
+    --bg: #0c0f14;
+    --surface: #141820;
+    --surface2: #1c2230;
+    --border: rgba(255,255,255,0.07);
+    --text: #e8eaf0;
+    --muted: #6b7280;
+    --accent-temp: #f97316;
+    --accent-hum: #38bdf8;
+    --accent-temp-dim: rgba(249,115,22,0.12);
+    --accent-hum-dim: rgba(56,189,248,0.12);
+    --green: #4ade80;
+    --red: #f87171;
+  }
 
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    padding: 2rem 1.5rem 4rem;
+  }
+
+  header {
+    max-width: 860px;
+    margin: 0 auto 3rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 1.5rem;
+  }
+
+  .logo {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+
+  header h1 {
+    font-size: 26px;
+    font-weight: 300;
+    letter-spacing: -0.02em;
+    color: var(--text);
+  }
+
+  header h1 span { font-weight: 500; }
+
+  .status-pill {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 12px;
+    font-family: 'DM Mono', monospace;
+    color: var(--muted);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 6px 14px;
+  }
+
+  .dot {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: var(--muted);
+    flex-shrink: 0;
+  }
+  .dot.ok { background: var(--green); box-shadow: 0 0 6px var(--green); animation: pulse 2s infinite; }
+  .dot.err { background: var(--red); }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+
+  main { max-width: 860px; margin: 0 auto; }
+
+  .big-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  .big-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .big-card::before {
+    content: '';
+    position: absolute;
+    top: -40px; right: -40px;
+    width: 120px; height: 120px;
+    border-radius: 50%;
+    opacity: 0.08;
+  }
+
+  .big-card.temp::before { background: var(--accent-temp); }
+  .big-card.hum::before { background: var(--accent-hum); }
+
+  .card-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 1rem;
+  }
+
+  .card-value {
+    font-size: 56px;
+    font-weight: 300;
+    letter-spacing: -0.04em;
+    line-height: 1;
+  }
+
+  .big-card.temp .card-value { color: var(--accent-temp); }
+  .big-card.hum .card-value { color: var(--accent-hum); }
+
+  .card-unit {
+    font-size: 20px;
+    font-weight: 400;
+    opacity: 0.6;
+    margin-left: 4px;
+  }
+
+  .card-sub {
+    margin-top: 1rem;
+    font-size: 12px;
+    color: var(--muted);
+    font-family: 'DM Mono', monospace;
+  }
+
+  .meta-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  .meta-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+  }
+
+  .meta-card .card-label { margin-bottom: 6px; }
+
+  .meta-val {
+    font-family: 'DM Mono', monospace;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--text);
+  }
+
+  .chart-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1.75rem 2rem;
+    margin-bottom: 16px;
+  }
+
+  .chart-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+  }
+
+  .chart-title {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .chart-range {
+    font-size: 11px;
+    color: var(--muted);
+    font-family: 'DM Mono', monospace;
+  }
+
+  .chart-wrap { height: 180px; }
+
+  .loading-state {
+    text-align: center;
+    padding: 4rem 0;
+    color: var(--muted);
+    font-family: 'DM Mono', monospace;
+    font-size: 13px;
+  }
+
+  .spinner {
+    width: 20px; height: 20px;
+    border: 2px solid var(--border);
+    border-top-color: var(--muted);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    margin: 0 auto 1rem;
+  }
+
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  .error-state {
+    text-align: center;
+    padding: 4rem 0;
+    color: var(--red);
+    font-family: 'DM Mono', monospace;
+    font-size: 13px;
+  }
+
+  footer {
+    max-width: 860px;
+    margin: 3rem auto 0;
+    font-size: 11px;
+    font-family: 'DM Mono', monospace;
+    color: var(--muted);
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+    border-top: 1px solid var(--border);
+    padding-top: 1.5rem;
+  }
+
+  footer a { color: var(--muted); text-decoration: none; }
+  footer a:hover { color: var(--text); }
+
+  @media (max-width: 600px) {
+    .big-cards { grid-template-columns: 1fr; }
+    .meta-row { grid-template-columns: 1fr 1fr; }
+    .card-value { font-size: 44px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div>
+    <div class="logo">ESP32 · Sevilla</div>
+    <h1>Estación <span>Meteorológica</span></h1>
+  </div>
+  <div class="status-pill">
+    <div class="dot" id="status-dot"></div>
+    <span id="status-text">cargando...</span>
+  </div>
+</header>
+
+<main>
+  <div id="loading-state" class="loading-state">
+    <div class="spinner"></div>
+    cargando datos...
+  </div>
+
+  <div id="content" style="display:none">
+
+    <div class="big-cards">
+      <div class="big-card temp">
+        <div class="card-label">temperatura</div>
+        <div class="card-value" id="val-temp">--<span class="card-unit">°C</span></div>
+        <div class="card-sub" id="sub-temp"></div>
+      </div>
+      <div class="big-card hum">
+        <div class="card-label">humedad relativa</div>
+        <div class="card-value" id="val-hum">--<span class="card-unit">%</span></div>
+        <div class="card-sub" id="sub-hum"></div>
+      </div>
+    </div>
+
+    <div class="meta-row">
+      <div class="meta-card">
+        <div class="card-label">última lectura</div>
+        <div class="meta-val" id="meta-ts">--</div>
+      </div>
+      <div class="meta-card">
+        <div class="card-label">lecturas (24h)</div>
+        <div class="meta-val" id="meta-count">--</div>
+      </div>
+      <div class="meta-card">
+        <div class="card-label">rango temp.</div>
+        <div class="meta-val" id="meta-range">--</div>
+      </div>
+    </div>
+
+    <div class="chart-card">
+      <div class="chart-header">
+        <div class="chart-title">temperatura · últimas 24h</div>
+        <div class="chart-range" id="range-temp"></div>
+      </div>
+      <div class="chart-wrap"><canvas id="chart-temp"></canvas></div>
+    </div>
+
+    <div class="chart-card">
+      <div class="chart-header">
+        <div class="chart-title">humedad · últimas 24h</div>
+        <div class="chart-range" id="range-hum"></div>
+      </div>
+      <div class="chart-wrap"><canvas id="chart-hum"></canvas></div>
+    </div>
+
+  </div>
+
+  <div id="error-state" class="error-state" style="display:none">
+    error al cargar datos — comprueba el repositorio
+  </div>
+</main>
+
+<footer>
+  <span>github.com/Aminoxamine/Esp32</span>
+  <span id="footer-updated"></span>
+</footer>
+
+<script>
+const DATA_URL = "https://raw.githubusercontent.com/Aminoxamine/Esp32/main/data.json";
+
+function fmtTime(isoStr) {
+  const d = new Date(isoStr);
+  return d.getHours().toString().padStart(2,'0') + ':' + d.getMinutes().toString().padStart(2,'0');
+}
+
+function fmtDateTime(isoStr) {
+  const d = new Date(isoStr);
+  return d.toLocaleDateString('es-ES', {day:'2-digit',month:'short'}) + ' ' +
+         d.getHours().toString().padStart(2,'0') + ':' + d.getMinutes().toString().padStart(2,'0');
+}
+
+function makeChart(id, labels, data, color, dimColor, unit, minY, maxY) {
+  const ctx = document.getElementById(id).getContext('2d');
+  return new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels,
+      datasets: [{
+        data,
+        borderColor: color,
+        backgroundColor: dimColor,
+        fill: true,
+        borderWidth: 1.5,
+        tension: 0.4,
+        pointRadius: data.length > 80 ? 0 : 2,
+        pointHoverRadius: 4,
+        pointBackgroundColor: color,
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      interaction: { mode: 'index', intersect: false },
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          backgroundColor: '#1c2230',
+          borderColor: 'rgba(255,255,255,0.1)',
+          borderWidth: 1,
+          titleColor: '#6b7280',
+          bodyColor: '#e8eaf0',
+          titleFont: { family: 'DM Mono', size: 11 },
+          bodyFont: { family: 'DM Mono', size: 13 },
+          padding: 10,
+          callbacks: {
+            label: ctx => `${ctx.parsed.y.toFixed(1)} ${unit}`
+          }
+        }
+      },
+      scales: {
+        x: {
+          ticks: {
+            maxTicksLimit: 8,
+            color: '#6b7280',
+            font: { family: 'DM Mono', size: 10 },
+          },
+          grid: { color: 'rgba(255,255,255,0.04)' },
+          border: { color: 'transparent' }
+        },
+        y: {
+          min: minY,
+          max: maxY,
+          ticks: {
+            color: '#6b7280',
+            font: { family: 'DM Mono', size: 10 },
+            callback: v => v.toFixed(0) + ' ' + unit
+          },
+          grid: { color: 'rgba(255,255,255,0.04)' },
+          border: { color: 'transparent' }
+        }
+      }
+    }
+  });
+}
+
+async function load() {
+  try {
+    const r = await fetch(DATA_URL + '?t=' + Date.now());
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    const data = await r.json();
+
+    if (!Array.isArray(data) || data.length === 0) {
+      document.getElementById('loading-state').innerHTML = '<div style="padding:4rem 0;color:var(--muted);font-family:DM Mono,monospace;font-size:13px">sin datos todavía</div>';
+      return;
+    }
+
+    const last = data[data.length - 1];
+    const temps = data.map(d => d.t);
+    const hums  = data.map(d => d.h);
+    const labels = data.map(d => fmtTime(d.ts));
+
+    const minT = Math.min(...temps), maxT = Math.max(...temps);
+    const minH = Math.min(...hums),  maxH = Math.max(...hums);
+    const padT = Math.max(1, (maxT - minT) * 0.2);
+    const padH = Math.max(2, (maxH - minH) * 0.2);
+
+    document.getElementById('val-temp').innerHTML = last.t.toFixed(1) + '<span class="card-unit">°C</span>';
+    document.getElementById('val-hum').innerHTML  = last.h.toFixed(1) + '<span class="card-unit">%</span>';
+    document.getElementById('sub-temp').textContent = 'mín ' + minT.toFixed(1) + '° · máx ' + maxT.toFixed(1) + '°';
+    document.getElementById('sub-hum').textContent  = 'mín ' + minH.toFixed(1) + '% · máx ' + maxH.toFixed(1) + '%';
+    document.getElementById('meta-ts').textContent    = fmtDateTime(last.ts);
+    document.getElementById('meta-count').textContent = data.length;
+    document.getElementById('meta-range').textContent = minT.toFixed(1) + '–' + maxT.toFixed(1) + '°';
+    document.getElementById('range-temp').textContent = minT.toFixed(1) + '° – ' + maxT.toFixed(1) + '°';
+    document.getElementById('range-hum').textContent  = minH.toFixed(1) + '% – ' + maxH.toFixed(1) + '%';
+    document.getElementById('footer-updated').textContent = 'actualizado ' + fmtDateTime(last.ts);
+
+    const dot = document.getElementById('status-dot');
+    const ago = (Date.now() - new Date(last.ts)) / 60000;
+    if (ago < 15) { dot.className = 'dot ok'; document.getElementById('status-text').textContent = 'en línea'; }
+    else          { dot.className = 'dot err'; document.getElementById('status-text').textContent = 'sin datos recientes'; }
+
+    document.getElementById('loading-state').style.display = 'none';
+    document.getElementById('content').style.display = 'block';
+
+    makeChart('chart-temp', labels, temps, '#f97316', 'rgba(249,115,22,0.08)', '°C',
+              parseFloat((minT - padT).toFixed(1)), parseFloat((maxT + padT).toFixed(1)));
+    makeChart('chart-hum',  labels, hums,  '#38bdf8', 'rgba(56,189,248,0.08)',  '%',
+              Math.max(0, parseFloat((minH - padH).toFixed(1))),
+              Math.min(100, parseFloat((maxH + padH).toFixed(1))));
+
+  } catch(e) {
+    document.getElementById('loading-state').style.display = 'none';
+    document.getElementById('error-state').style.display = 'block';
+    const dot = document.getElementById('status-dot');
+    dot.className = 'dot err';
+    document.getElementById('status-text').textContent = 'error';
+    console.error(e);
+  }
+}
+
+load();
+setInterval(load, 5 * 60 * 1000);
+</script>
+</body>
+</html>
