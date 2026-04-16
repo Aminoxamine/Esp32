@@ -1373,3 +1373,9 @@ wnout
 [07:11:16] [INFO] RAM:274956b Boot#153 v10
 [08:11:49] [WEB] Dashboard en http://10.106.156.118
 [08:11:49] WiFi OK. IP: 10.106.156.118
+--------------------2026-04-16--------------------
+[07:11:55] === INICIANDO v10 boot#154 ===
+[07:11:55] [RESET] Watchdog interno
+[07:11:55] [INFO] RAM:274956b Boot#154 v10
+[08:12:28] [WEB] Dashboard en http://10.106.156.118
+[08:12:28] WiFi OK. IP: 10.106.156.118
