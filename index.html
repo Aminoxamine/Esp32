@@ -13,13 +13,13 @@
     --surface: #141820;
     --surface2: #1c2230;
     --border: rgba(255,255,255,0.07);
+    --border2: rgba(255,255,255,0.14);
     --text: #e8eaf0;
     --muted: #6b7280;
     --accent-temp: #f97316;
     --accent-hum: #38bdf8;
     --green: #4ade80;
     --red: #f87171;
-    --amber: #fbbf24;
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -30,9 +30,8 @@
     color: var(--text);
     min-height: 100vh;
     padding: 2rem 1.5rem 4rem;
-    transition: background 0.4s;
+    transition: background 0.5s;
   }
-
   body.alert-hot  { background: #1a0e08; }
   body.alert-cold { background: #08101a; }
 
@@ -49,8 +48,7 @@
   }
   .alert-banner.show { display: flex; }
   .alert-banner.hot  { background: rgba(249,115,22,0.12); border: 1px solid rgba(249,115,22,0.3); color: #fb923c; }
-  .alert-banner.cold { background: rgba(56,189,248,0.12); border: 1px solid rgba(56,189,248,0.3);  color: #38bdf8; }
-  .alert-icon { font-size: 16px; }
+  .alert-banner.cold { background: rgba(56,189,248,0.12); border: 1px solid rgba(56,189,248,0.3); color: #38bdf8; }
 
   header {
     max-width: 860px;
@@ -63,18 +61,10 @@
     border-bottom: 1px solid var(--border);
     padding-bottom: 1.5rem;
   }
-
   .logo { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.15em; color: var(--muted); text-transform: uppercase; margin-bottom: 6px; }
-  header h1 { font-size: 26px; font-weight: 300; letter-spacing: -0.02em; color: var(--text); }
+  header h1 { font-size: 26px; font-weight: 300; letter-spacing: -0.02em; }
   header h1 span { font-weight: 500; }
-
-  .status-pill {
-    display: flex; align-items: center; gap: 7px;
-    font-size: 12px; font-family: 'DM Mono', monospace; color: var(--muted);
-    background: var(--surface); border: 1px solid var(--border);
-    border-radius: 999px; padding: 6px 14px;
-  }
-
+  .status-pill { display: flex; align-items: center; gap: 7px; font-size: 12px; font-family: 'DM Mono', monospace; color: var(--muted); background: var(--surface); border: 1px solid var(--border); border-radius: 999px; padding: 6px 14px; }
   .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--muted); flex-shrink: 0; }
   .dot.ok  { background: var(--green); box-shadow: 0 0 6px var(--green); animation: pulse 2s infinite; }
   .dot.err { background: var(--red); }
@@ -82,17 +72,74 @@
 
   main { max-width: 860px; margin: 0 auto; }
 
-  .big-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+  /* DATE SELECTOR */
+  .date-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  .date-nav-btn {
+    width: 34px; height: 34px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text);
+    font-size: 16px;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: border-color 0.15s;
+    flex-shrink: 0;
+  }
+  .date-nav-btn:hover { border-color: var(--border2); }
+  .date-nav-btn:disabled { opacity: 0.3; cursor: default; }
 
+  .date-input-wrap { position: relative; }
+  #date-input {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text);
+    font-family: 'DM Mono', monospace;
+    font-size: 13px;
+    padding: 7px 12px;
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.15s;
+    color-scheme: dark;
+  }
+  #date-input:hover, #date-input:focus { border-color: var(--border2); }
+
+  .today-btn {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--muted);
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .today-btn:hover { color: var(--text); border-color: var(--border2); }
+  .today-btn.active { background: var(--surface2); color: var(--text); border-color: var(--border2); }
+
+  .date-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    color: var(--muted);
+    margin-left: auto;
+  }
+
+  /* BIG CARDS */
+  .big-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
   .big-card {
     background: var(--surface); border: 1px solid var(--border);
     border-radius: 16px; padding: 2rem; position: relative; overflow: hidden;
     transition: border-color 0.4s;
   }
-  .big-card::before {
-    content: ''; position: absolute; top: -40px; right: -40px;
-    width: 120px; height: 120px; border-radius: 50%; opacity: 0.08;
-  }
+  .big-card::before { content: ''; position: absolute; top: -40px; right: -40px; width: 120px; height: 120px; border-radius: 50%; opacity: 0.08; }
   .big-card.temp::before { background: var(--accent-temp); }
   .big-card.hum::before  { background: var(--accent-hum); }
   .big-card.alert-hot-card  { border-color: rgba(249,115,22,0.4); }
@@ -103,20 +150,15 @@
   .big-card.temp .card-value { color: var(--accent-temp); }
   .big-card.hum  .card-value { color: var(--accent-hum); }
   .card-unit { font-size: 20px; font-weight: 400; opacity: 0.6; margin-left: 4px; }
-
   .card-bottom { margin-top: 1rem; display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap; }
   .card-sub { font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; }
 
-  .trend {
-    display: flex; align-items: center; gap: 5px;
-    font-family: 'DM Mono', monospace; font-size: 12px;
-    padding: 3px 10px; border-radius: 999px; border: 1px solid var(--border);
-  }
+  .trend { display: flex; align-items: center; gap: 5px; font-family: 'DM Mono', monospace; font-size: 12px; padding: 3px 10px; border-radius: 999px; border: 1px solid var(--border); }
   .trend.up   { color: #f87171; border-color: rgba(248,113,113,0.3); }
   .trend.down { color: #38bdf8; border-color: rgba(56,189,248,0.3); }
   .trend.flat { color: var(--muted); }
-  .trend-arrow { font-size: 14px; line-height: 1; }
 
+  /* STATS */
   .stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 16px; }
   .stat-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.1rem 1.25rem; }
   .stat-card .card-label { margin-bottom: 4px; }
@@ -124,16 +166,20 @@
   .stat-val.hot  { color: #f97316; }
   .stat-val.cold { color: #38bdf8; }
 
+  /* META */
   .meta-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 16px; }
   .meta-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.25rem 1.5rem; }
   .meta-card .card-label { margin-bottom: 6px; }
   .meta-val { font-family: 'DM Mono', monospace; font-size: 18px; font-weight: 500; color: var(--text); }
 
+  /* CHART */
   .chart-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 1.75rem 2rem; margin-bottom: 16px; }
-  .chart-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.25rem; flex-wrap: wrap; gap: 12px; }
+  .chart-header { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 1.25rem; flex-wrap: wrap; gap: 12px; }
   .chart-title { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
   .chart-stats { font-size: 11px; color: var(--muted); font-family: 'DM Mono', monospace; }
+  .chart-controls { display: flex; flex-direction: column; align-items: flex-end; gap: 8px; }
 
+  /* RANGE SELECTOR */
   .range-selector { display: flex; gap: 6px; }
   .range-btn {
     font-family: 'DM Mono', monospace; font-size: 11px;
@@ -141,15 +187,42 @@
     border: 1px solid var(--border); background: transparent;
     color: var(--muted); cursor: pointer; transition: all 0.15s;
   }
-  .range-btn:hover { color: var(--text); border-color: rgba(255,255,255,0.2); }
-  .range-btn.active { background: var(--surface2); color: var(--text); border-color: rgba(255,255,255,0.2); }
+  .range-btn:hover { color: var(--text); border-color: var(--border2); }
+  .range-btn.active { background: var(--surface2); color: var(--text); border-color: var(--border2); }
+
+  /* WINDOW NAVIGATOR */
+  .window-nav {
+    display: none;
+    align-items: center;
+    gap: 8px;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+  }
+  .window-nav.show { display: flex; }
+  .win-btn {
+    width: 24px; height: 24px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text);
+    font-size: 12px;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: border-color 0.15s;
+  }
+  .win-btn:hover { border-color: var(--border2); }
+  .win-btn:disabled { opacity: 0.3; cursor: default; }
+  .win-label { min-width: 90px; text-align: center; }
 
   .chart-wrap { height: 180px; }
 
+  /* STATES */
   .loading-state { text-align: center; padding: 4rem 0; color: var(--muted); font-family: 'DM Mono', monospace; font-size: 13px; }
   .spinner { width: 20px; height: 20px; border: 2px solid var(--border); border-top-color: var(--muted); border-radius: 50%; animation: spin 0.8s linear infinite; margin: 0 auto 1rem; }
   @keyframes spin { to { transform: rotate(360deg); } }
   .error-state { text-align: center; padding: 4rem 0; color: var(--red); font-family: 'DM Mono', monospace; font-size: 13px; }
+  .no-data-state { text-align: center; padding: 4rem 0; color: var(--muted); font-family: 'DM Mono', monospace; font-size: 13px; }
 
   footer {
     max-width: 860px; margin: 3rem auto 0;
@@ -165,13 +238,14 @@
     .stats-row  { grid-template-columns: 1fr 1fr; }
     .meta-row   { grid-template-columns: 1fr 1fr; }
     .card-value { font-size: 44px; }
+    .date-label { display: none; }
   }
 </style>
 </head>
 <body>
 
 <div class="alert-banner" id="alert-banner">
-  <span class="alert-icon" id="alert-icon"></span>
+  <span id="alert-icon"></span>
   <span id="alert-text"></span>
 </div>
 
@@ -187,9 +261,24 @@
 </header>
 
 <main>
+  <!-- DATE BAR -->
+  <div class="date-bar">
+    <button class="date-nav-btn" id="btn-prev" title="Día anterior">&#8592;</button>
+    <input type="date" id="date-input">
+    <button class="date-nav-btn" id="btn-next" title="Día siguiente" disabled>&#8594;</button>
+    <button class="today-btn active" id="btn-today">hoy</button>
+    <span class="date-label" id="date-label"></span>
+  </div>
+
   <div id="loading-state" class="loading-state">
     <div class="spinner"></div>
     cargando datos...
+  </div>
+  <div id="no-data-state" class="no-data-state" style="display:none">
+    sin datos para esta fecha
+  </div>
+  <div id="error-state" class="error-state" style="display:none">
+    error al cargar datos
   </div>
 
   <div id="content" style="display:none">
@@ -214,75 +303,66 @@
     </div>
 
     <div class="stats-row">
-      <div class="stat-card">
-        <div class="card-label">temp. mínima</div>
-        <div class="stat-val cold" id="stat-tmin">--</div>
-      </div>
-      <div class="stat-card">
-        <div class="card-label">temp. máxima</div>
-        <div class="stat-val hot" id="stat-tmax">--</div>
-      </div>
-      <div class="stat-card">
-        <div class="card-label">temp. media</div>
-        <div class="stat-val" id="stat-tavg">--</div>
-      </div>
-      <div class="stat-card">
-        <div class="card-label">hum. media</div>
-        <div class="stat-val" id="stat-havg">--</div>
-      </div>
+      <div class="stat-card"><div class="card-label">temp. mínima</div><div class="stat-val cold" id="stat-tmin">--</div></div>
+      <div class="stat-card"><div class="card-label">temp. máxima</div><div class="stat-val hot"  id="stat-tmax">--</div></div>
+      <div class="stat-card"><div class="card-label">temp. media</div> <div class="stat-val"      id="stat-tavg">--</div></div>
+      <div class="stat-card"><div class="card-label">hum. media</div>  <div class="stat-val"      id="stat-havg">--</div></div>
     </div>
 
     <div class="meta-row">
-      <div class="meta-card">
-        <div class="card-label">última lectura</div>
-        <div class="meta-val" id="meta-ts">--</div>
-      </div>
-      <div class="meta-card">
-        <div class="card-label">lecturas totales</div>
-        <div class="meta-val" id="meta-count">--</div>
-      </div>
-      <div class="meta-card">
-        <div class="card-label">rango temp.</div>
-        <div class="meta-val" id="meta-range">--</div>
-      </div>
+      <div class="meta-card"><div class="card-label">última lectura</div><div class="meta-val" id="meta-ts">--</div></div>
+      <div class="meta-card"><div class="card-label">lecturas del día</div><div class="meta-val" id="meta-count">--</div></div>
+      <div class="meta-card"><div class="card-label">rango temp.</div><div class="meta-val" id="meta-range">--</div></div>
     </div>
 
+    <!-- TEMP CHART -->
     <div class="chart-card">
       <div class="chart-header">
         <div>
           <div class="chart-title">temperatura</div>
-          <div class="chart-stats" id="range-temp"></div>
+          <div class="chart-stats" id="stats-temp"></div>
         </div>
-        <div class="range-selector">
-          <button class="range-btn" data-h="1"  data-chart="temp">1h</button>
-          <button class="range-btn" data-h="6"  data-chart="temp">6h</button>
-          <button class="range-btn" data-h="12" data-chart="temp">12h</button>
-          <button class="range-btn active" data-h="24" data-chart="temp">24h</button>
+        <div class="chart-controls">
+          <div class="range-selector">
+            <button class="range-btn" data-h="1"  data-chart="temp">1h</button>
+            <button class="range-btn" data-h="6"  data-chart="temp">6h</button>
+            <button class="range-btn" data-h="12" data-chart="temp">12h</button>
+            <button class="range-btn active" data-h="24" data-chart="temp">24h</button>
+          </div>
+          <div class="window-nav" id="win-nav-temp">
+            <button class="win-btn" id="win-prev-temp">&#8592;</button>
+            <span class="win-label" id="win-label-temp"></span>
+            <button class="win-btn" id="win-next-temp">&#8594;</button>
+          </div>
         </div>
       </div>
       <div class="chart-wrap"><canvas id="chart-temp"></canvas></div>
     </div>
 
+    <!-- HUM CHART -->
     <div class="chart-card">
       <div class="chart-header">
         <div>
           <div class="chart-title">humedad</div>
-          <div class="chart-stats" id="range-hum"></div>
+          <div class="chart-stats" id="stats-hum"></div>
         </div>
-        <div class="range-selector">
-          <button class="range-btn" data-h="1"  data-chart="hum">1h</button>
-          <button class="range-btn" data-h="6"  data-chart="hum">6h</button>
-          <button class="range-btn" data-h="12" data-chart="hum">12h</button>
-          <button class="range-btn active" data-h="24" data-chart="hum">24h</button>
+        <div class="chart-controls">
+          <div class="range-selector">
+            <button class="range-btn" data-h="1"  data-chart="hum">1h</button>
+            <button class="range-btn" data-h="6"  data-chart="hum">6h</button>
+            <button class="range-btn" data-h="12" data-chart="hum">12h</button>
+            <button class="range-btn active" data-h="24" data-chart="hum">24h</button>
+          </div>
+          <div class="window-nav" id="win-nav-hum">
+            <button class="win-btn" id="win-prev-hum">&#8592;</button>
+            <span class="win-label" id="win-label-hum"></span>
+            <button class="win-btn" id="win-next-hum">&#8594;</button>
+          </div>
         </div>
       </div>
       <div class="chart-wrap"><canvas id="chart-hum"></canvas></div>
     </div>
 
-  </div>
-
-  <div id="error-state" class="error-state" style="display:none">
-    error al cargar datos — comprueba el repositorio
   </div>
 </main>
 
@@ -292,116 +372,118 @@
 </footer>
 
 <script>
-const DATA_URL   = "https://raw.githubusercontent.com/Aminoxamine/Esp32/main/data.json";
+const RAW_BASE   = "https://raw.githubusercontent.com/Aminoxamine/Esp32/main/data/";
+const INDEX_URL  = RAW_BASE + "index.json";
 const ALERT_HOT  = 25;
 const ALERT_COLD = 15;
 
-let allData = [];
-let chartTemp = null;
-let chartHum  = null;
-let activeHoursTemp = 24;
-let activeHoursHum  = 24;
+let allData      = [];
+let availDates   = [];
+let chartTemp    = null;
+let chartHum     = null;
+let winOffsetT   = 0;   // cuántas ventanas hacia atrás estamos en temp
+let winOffsetH   = 0;
+let activeHoursT = 24;
+let activeHoursH = 24;
+let selectedDate = "";
 
-function parseLocal(isoStr) {
-  const [date, time] = isoStr.split('T');
-  const [y, mo, d]   = date.split('-').map(Number);
-  const [h, mi, s]   = time.split(':').map(Number);
-  return new Date(y, mo - 1, d, h, mi, s || 0);
+// ---- HELPERS ----
+function todayStr() {
+  const d = new Date();
+  return d.getFullYear() + '-' +
+    String(d.getMonth()+1).padStart(2,'0') + '-' +
+    String(d.getDate()).padStart(2,'0');
 }
 
-function fmtTime(isoStr) {
-  const d = parseLocal(isoStr);
-  return d.getHours().toString().padStart(2,'0') + ':' + d.getMinutes().toString().padStart(2,'0');
+function parseLocal(iso) {
+  const [date, time] = iso.split('T');
+  const [y,mo,d] = date.split('-').map(Number);
+  const [h,mi,s] = time.split(':').map(Number);
+  return new Date(y, mo-1, d, h, mi, s||0);
 }
 
-function fmtDateTime(isoStr) {
-  const d = parseLocal(isoStr);
-  return d.toLocaleDateString('es-ES', {day:'2-digit', month:'short'}) + ' ' +
-         d.getHours().toString().padStart(2,'0') + ':' + d.getMinutes().toString().padStart(2,'0');
+function fmtTime(iso) {
+  const d = parseLocal(iso);
+  return String(d.getHours()).padStart(2,'0') + ':' + String(d.getMinutes()).padStart(2,'0');
 }
 
-function filterByHours(data, hours) {
+function fmtDateTime(iso) {
+  const d = parseLocal(iso);
+  return d.toLocaleDateString('es-ES',{day:'2-digit',month:'short'}) + ' ' +
+    String(d.getHours()).padStart(2,'0') + ':' + String(d.getMinutes()).padStart(2,'0');
+}
+
+function fmtDateLabel(dateStr) {
+  const [y,m,d] = dateStr.split('-').map(Number);
+  const date = new Date(y,m-1,d);
+  return date.toLocaleDateString('es-ES',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
+}
+
+function avg(arr) { return arr.reduce((a,b)=>a+b,0)/arr.length; }
+
+function filterByWindow(data, hours, offset) {
   if (!data.length) return data;
-  const last   = parseLocal(data[data.length - 1].ts).getTime();
-  const cutoff = last - hours * 3600 * 1000;
-  return data.filter(d => parseLocal(d.ts).getTime() >= cutoff);
+  const last    = parseLocal(data[data.length-1].ts).getTime();
+  const winEnd  = last - offset * hours * 3600000;
+  const winStart= winEnd - hours * 3600000;
+  return data.filter(d => {
+    const t = parseLocal(d.ts).getTime();
+    return t >= winStart && t <= winEnd;
+  });
 }
-
-function avg(arr) { return arr.reduce((a, b) => a + b, 0) / arr.length; }
 
 function getTrend(data, field, minutes) {
   if (data.length < 2) return null;
-  const last   = parseLocal(data[data.length - 1].ts).getTime();
-  const cutoff = last - minutes * 60 * 1000;
+  const last   = parseLocal(data[data.length-1].ts).getTime();
+  const cutoff = last - minutes * 60000;
   const recent = data.filter(d => parseLocal(d.ts).getTime() >= cutoff);
   if (recent.length < 2) return null;
-  return recent[recent.length - 1][field] - recent[0][field];
+  return recent[recent.length-1][field] - recent[0][field];
 }
 
 function renderTrend(elId, diff, unit) {
   const el = document.getElementById(elId);
-  if (diff === null) { el.innerHTML = ''; return; }
+  if (diff === null) { el.innerHTML=''; el.className='trend'; return; }
   const abs = Math.abs(diff).toFixed(1);
   if (Math.abs(diff) < 0.3) {
-    el.className = 'trend flat';
-    el.innerHTML = '<span class="trend-arrow">&#8594;</span> estable';
+    el.className='trend flat'; el.innerHTML='&#8594; estable';
   } else if (diff > 0) {
-    el.className = 'trend up';
-    el.innerHTML = '<span class="trend-arrow">&#8593;</span> +' + abs + unit;
+    el.className='trend up'; el.innerHTML='&#8593; +'+abs+unit;
   } else {
-    el.className = 'trend down';
-    el.innerHTML = '<span class="trend-arrow">&#8595;</span> -' + abs + unit;
+    el.className='trend down'; el.innerHTML='&#8595; -'+abs+unit;
   }
 }
 
+function winLabel(data, hours, offset) {
+  if (!data.length) return '';
+  const last   = parseLocal(data[data.length-1].ts).getTime();
+  const winEnd = new Date(last - offset * hours * 3600000);
+  const winSt  = new Date(last - (offset+1) * hours * 3600000);
+  const fmt = t => String(t.getHours()).padStart(2,'0')+':'+String(t.getMinutes()).padStart(2,'0');
+  return fmt(winSt) + ' – ' + fmt(winEnd);
+}
+
+// ---- CHARTS ----
 function makeChart(id, labels, values, color, dimColor, unit, minY, maxY) {
   const ctx = document.getElementById(id).getContext('2d');
   return new Chart(ctx, {
     type: 'line',
-    data: {
-      labels,
-      datasets: [{
-        data: values,
-        borderColor: color,
-        backgroundColor: dimColor,
-        fill: true,
-        borderWidth: 1.5,
-        tension: 0.4,
-        pointRadius: values.length > 80 ? 0 : 2,
-        pointHoverRadius: 4,
-        pointBackgroundColor: color,
-      }]
-    },
+    data: { labels, datasets: [{ data: values, borderColor: color, backgroundColor: dimColor, fill: true, borderWidth: 1.5, tension: 0.4, pointRadius: values.length > 80 ? 0 : 2, pointHoverRadius: 4, pointBackgroundColor: color }] },
     options: {
-      responsive: true,
-      maintainAspectRatio: false,
+      responsive: true, maintainAspectRatio: false,
       interaction: { mode: 'index', intersect: false },
       plugins: {
         legend: { display: false },
         tooltip: {
-          backgroundColor: '#1c2230',
-          borderColor: 'rgba(255,255,255,0.1)',
-          borderWidth: 1,
-          titleColor: '#6b7280',
-          bodyColor: '#e8eaf0',
-          titleFont: { family: 'DM Mono', size: 11 },
-          bodyFont: { family: 'DM Mono', size: 13 },
-          padding: 10,
-          callbacks: { label: ctx => ctx.parsed.y.toFixed(1) + ' ' + unit }
+          backgroundColor: '#1c2230', borderColor: 'rgba(255,255,255,0.1)', borderWidth: 1,
+          titleColor: '#6b7280', bodyColor: '#e8eaf0',
+          titleFont: { family: 'DM Mono', size: 11 }, bodyFont: { family: 'DM Mono', size: 13 },
+          padding: 10, callbacks: { label: c => c.parsed.y.toFixed(1)+' '+unit }
         }
       },
       scales: {
-        x: {
-          ticks: { maxTicksLimit: 8, color: '#6b7280', font: { family: 'DM Mono', size: 10 } },
-          grid: { color: 'rgba(255,255,255,0.04)' },
-          border: { color: 'transparent' }
-        },
-        y: {
-          min: minY, max: maxY,
-          ticks: { color: '#6b7280', font: { family: 'DM Mono', size: 10 }, callback: v => v.toFixed(0) + ' ' + unit },
-          grid: { color: 'rgba(255,255,255,0.04)' },
-          border: { color: 'transparent' }
-        }
+        x: { ticks: { maxTicksLimit: 8, color: '#6b7280', font: { family: 'DM Mono', size: 10 } }, grid: { color: 'rgba(255,255,255,0.04)' }, border: { color: 'transparent' } },
+        y: { min: minY, max: maxY, ticks: { color: '#6b7280', font: { family: 'DM Mono', size: 10 }, callback: v => v.toFixed(0)+' '+unit }, grid: { color: 'rgba(255,255,255,0.04)' }, border: { color: 'transparent' } }
       }
     }
   });
@@ -409,165 +491,280 @@ function makeChart(id, labels, values, color, dimColor, unit, minY, maxY) {
 
 function updateChart(chartObj, filtered, unit) {
   const labels = filtered.map(d => fmtTime(d.ts));
-  const values = filtered.map(d => unit === '°C' ? d.t : d.h);
+  const values = filtered.map(d => unit==='°C' ? d.t : d.h);
   chartObj.data.labels = labels;
   chartObj.data.datasets[0].data = values;
   chartObj.data.datasets[0].pointRadius = values.length > 80 ? 0 : 2;
-  const mn = Math.min(...values), mx = Math.max(...values);
-  const pad = Math.max(unit === '°C' ? 1 : 2, (mx - mn) * 0.2);
-  chartObj.options.scales.y.min = unit === '%' ? Math.max(0, parseFloat((mn - pad).toFixed(1))) : parseFloat((mn - pad).toFixed(1));
-  chartObj.options.scales.y.max = unit === '%' ? Math.min(100, parseFloat((mx + pad).toFixed(1))) : parseFloat((mx + pad).toFixed(1));
+  if (values.length) {
+    const mn = Math.min(...values), mx = Math.max(...values);
+    const pad = Math.max(unit==='°C' ? 1 : 2, (mx-mn)*0.2);
+    chartObj.options.scales.y.min = unit==='%' ? Math.max(0,+(mn-pad).toFixed(1)) : +(mn-pad).toFixed(1);
+    chartObj.options.scales.y.max = unit==='%' ? Math.min(100,+(mx+pad).toFixed(1)) : +(mx+pad).toFixed(1);
+  }
   chartObj.update();
 }
 
-function updateRangeStats(elId, filtered, unit) {
-  if (!filtered.length) return;
-  const vals = filtered.map(d => unit === '°C' ? d.t : d.h);
+function updateChartStats(elId, filtered, unit) {
+  if (!filtered.length) { document.getElementById(elId).textContent=''; return; }
+  const vals = filtered.map(d => unit==='°C' ? d.t : d.h);
   const mn = Math.min(...vals), mx = Math.max(...vals);
-  document.getElementById(elId).textContent =
-    mn.toFixed(1) + unit + ' – ' + mx.toFixed(1) + unit + ' · ' + filtered.length + ' lecturas';
+  document.getElementById(elId).textContent = mn.toFixed(1)+unit+' – '+mx.toFixed(1)+unit+' · '+filtered.length+' lecturas';
 }
 
+function refreshChart(chartType) {
+  const isTemp  = chartType === 'temp';
+  const hours   = isTemp ? activeHoursT : activeHoursH;
+  const offset  = isTemp ? winOffsetT : winOffsetH;
+  const unit    = isTemp ? '°C' : '%';
+  const chartId = isTemp ? 'chart-temp' : 'chart-hum';
+  const statsId = isTemp ? 'stats-temp' : 'stats-hum';
+  const navId   = isTemp ? 'win-nav-temp' : 'win-nav-hum';
+  const prevId  = isTemp ? 'win-prev-temp' : 'win-prev-hum';
+  const nextId  = isTemp ? 'win-next-temp' : 'win-next-hum';
+  const labelId = isTemp ? 'win-label-temp' : 'win-label-hum';
+
+  const filtered = filterByWindow(allData, hours, offset);
+  const chartObj = isTemp ? chartTemp : chartHum;
+
+  if (chartObj) updateChart(chartObj, filtered, unit);
+  updateChartStats(statsId, filtered, unit);
+
+  // Mostrar/ocultar navegador de ventanas
+  const nav = document.getElementById(navId);
+  if (hours < 24) {
+    nav.classList.add('show');
+    document.getElementById(labelId).textContent = winLabel(allData, hours, offset);
+    // botón anterior: ¿hay datos antes?
+    const prevFiltered = filterByWindow(allData, hours, offset+1);
+    document.getElementById(prevId).disabled = prevFiltered.length === 0;
+    // botón siguiente: no podemos ir al futuro (offset 0 es el más reciente)
+    document.getElementById(nextId).disabled = offset === 0;
+  } else {
+    nav.classList.remove('show');
+  }
+}
+
+// ---- ALERTS ----
 function checkAlerts(temp) {
   const banner = document.getElementById('alert-banner');
-  const body   = document.body;
-  const cardT  = document.getElementById('card-temp');
-
-  body.classList.remove('alert-hot', 'alert-cold');
-  cardT.classList.remove('alert-hot-card', 'alert-cold-card');
-  banner.classList.remove('show', 'hot', 'cold');
-
+  document.body.classList.remove('alert-hot','alert-cold');
+  document.getElementById('card-temp').classList.remove('alert-hot-card','alert-cold-card');
+  banner.classList.remove('show','hot','cold');
   if (temp > ALERT_HOT) {
-    body.classList.add('alert-hot');
-    cardT.classList.add('alert-hot-card');
-    banner.classList.add('show', 'hot');
-    document.getElementById('alert-icon').textContent = '&#9650;';
-    document.getElementById('alert-text').textContent =
-      'temperatura alta: ' + temp.toFixed(1) + '°C — supera el umbral de ' + ALERT_HOT + '°C';
+    document.body.classList.add('alert-hot');
+    document.getElementById('card-temp').classList.add('alert-hot-card');
+    banner.classList.add('show','hot');
+    document.getElementById('alert-icon').textContent = '▲';
+    document.getElementById('alert-text').textContent = 'temperatura alta: '+temp.toFixed(1)+'°C — supera el umbral de '+ALERT_HOT+'°C';
   } else if (temp < ALERT_COLD) {
-    body.classList.add('alert-cold');
-    cardT.classList.add('alert-cold-card');
-    banner.classList.add('show', 'cold');
-    document.getElementById('alert-icon').textContent = '&#9660;';
-    document.getElementById('alert-text').textContent =
-      'temperatura baja: ' + temp.toFixed(1) + '°C — por debajo del umbral de ' + ALERT_COLD + '°C';
+    document.body.classList.add('alert-cold');
+    document.getElementById('card-temp').classList.add('alert-cold-card');
+    banner.classList.add('show','cold');
+    document.getElementById('alert-icon').textContent = '▼';
+    document.getElementById('alert-text').textContent = 'temperatura baja: '+temp.toFixed(1)+'°C — por debajo del umbral de '+ALERT_COLD+'°C';
   }
 }
 
-function setupRangeButtons() {
-  document.querySelectorAll('.range-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const hours = parseInt(btn.dataset.h);
-      const chart = btn.dataset.chart;
-      btn.closest('.range-selector').querySelectorAll('.range-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      const filtered = filterByHours(allData, hours);
-      if (chart === 'temp') {
-        activeHoursTemp = hours;
-        updateChart(chartTemp, filtered, '°C');
-        updateRangeStats('range-temp', filtered, '°C');
-      } else {
-        activeHoursHum = hours;
-        updateChart(chartHum, filtered, '%');
-        updateRangeStats('range-hum', filtered, '%');
-      }
-    });
-  });
-}
-
-function render(data) {
+// ---- RENDER ----
+function render(data, isToday) {
   allData = data;
-  const last  = data[data.length - 1];
+  winOffsetT = 0; winOffsetH = 0;
+
+  const last  = data[data.length-1];
   const temps = data.map(d => d.t);
   const hums  = data.map(d => d.h);
+  const minT  = Math.min(...temps), maxT = Math.max(...temps);
+  const minH  = Math.min(...hums),  maxH = Math.max(...hums);
 
-  document.getElementById('val-temp').innerHTML = last.t.toFixed(1) + '<span class="card-unit">°C</span>';
-  document.getElementById('val-hum').innerHTML  = last.h.toFixed(1) + '<span class="card-unit">%</span>';
+  // Valores actuales / del día
+  document.getElementById('val-temp').innerHTML = last.t.toFixed(1)+'<span class="card-unit">°C</span>';
+  document.getElementById('val-hum').innerHTML  = last.h.toFixed(1)+'<span class="card-unit">%</span>';
+  document.getElementById('sub-temp').textContent = 'mín '+minT.toFixed(1)+'° · máx '+maxT.toFixed(1)+'°';
+  document.getElementById('sub-hum').textContent  = 'mín '+minH.toFixed(1)+'% · máx '+maxH.toFixed(1)+'%';
 
-  const minT = Math.min(...temps), maxT = Math.max(...temps);
-  const minH = Math.min(...hums),  maxH = Math.max(...hums);
-  const avgT = avg(temps), avgH = avg(hums);
+  // Stats
+  document.getElementById('stat-tmin').textContent = minT.toFixed(1)+'°C';
+  document.getElementById('stat-tmax').textContent = maxT.toFixed(1)+'°C';
+  document.getElementById('stat-tavg').textContent = avg(temps).toFixed(1)+'°C';
+  document.getElementById('stat-havg').textContent = avg(hums).toFixed(1)+'%';
 
-  document.getElementById('sub-temp').textContent = 'mín ' + minT.toFixed(1) + '° · máx ' + maxT.toFixed(1) + '°';
-  document.getElementById('sub-hum').textContent  = 'mín ' + minH.toFixed(1) + '% · máx ' + maxH.toFixed(1) + '%';
-
-  document.getElementById('stat-tmin').textContent = minT.toFixed(1) + '°C';
-  document.getElementById('stat-tmax').textContent = maxT.toFixed(1) + '°C';
-  document.getElementById('stat-tavg').textContent = avgT.toFixed(1) + '°C';
-  document.getElementById('stat-havg').textContent = avgH.toFixed(1) + '%';
-
+  // Meta
   document.getElementById('meta-ts').textContent    = fmtDateTime(last.ts);
   document.getElementById('meta-count').textContent = data.length;
-  document.getElementById('meta-range').textContent = minT.toFixed(1) + '–' + maxT.toFixed(1) + '°';
-  document.getElementById('footer-updated').textContent = 'actualizado ' + fmtDateTime(last.ts);
+  document.getElementById('meta-range').textContent = minT.toFixed(1)+'–'+maxT.toFixed(1)+'°';
+  document.getElementById('footer-updated').textContent = 'actualizado '+fmtDateTime(last.ts);
 
-  renderTrend('trend-temp', getTrend(data, 't', 60), '°C');
-  renderTrend('trend-hum',  getTrend(data, 'h', 60), '%');
+  // Tendencia solo tiene sentido en hoy
+  if (isToday) {
+    renderTrend('trend-temp', getTrend(data,'t',60), '°C');
+    renderTrend('trend-hum',  getTrend(data,'h',60), '%');
+  } else {
+    document.getElementById('trend-temp').innerHTML=''; document.getElementById('trend-temp').className='trend';
+    document.getElementById('trend-hum').innerHTML='';  document.getElementById('trend-hum').className='trend';
+  }
 
+  // Estado online (solo relevante en hoy)
   const dot = document.getElementById('status-dot');
-  const ago = (Date.now() - parseLocal(last.ts).getTime()) / 60000;
-  if (ago < 15) { dot.className = 'dot ok'; document.getElementById('status-text').textContent = 'en línea'; }
-  else          { dot.className = 'dot err'; document.getElementById('status-text').textContent = 'sin datos recientes'; }
-
-  checkAlerts(last.t);
-
-  const filtT = filterByHours(data, activeHoursTemp);
-  const filtH = filterByHours(data, activeHoursHum);
-  const labT  = filtT.map(d => fmtTime(d.ts));
-  const labH  = filtH.map(d => fmtTime(d.ts));
-  const valT  = filtT.map(d => d.t);
-  const valH  = filtH.map(d => d.h);
-  const padT  = Math.max(1, (Math.max(...valT) - Math.min(...valT)) * 0.2);
-  const padH  = Math.max(2, (Math.max(...valH) - Math.min(...valH)) * 0.2);
-
-  if (chartTemp) {
-    updateChart(chartTemp, filtT, '°C');
+  if (isToday) {
+    const ago = (Date.now() - parseLocal(last.ts).getTime()) / 60000;
+    if (ago < 15) { dot.className='dot ok'; document.getElementById('status-text').textContent='en línea'; }
+    else          { dot.className='dot err'; document.getElementById('status-text').textContent='sin datos recientes'; }
   } else {
-    chartTemp = makeChart('chart-temp', labT, valT, '#f97316', 'rgba(249,115,22,0.08)', '°C',
-      parseFloat((Math.min(...valT) - padT).toFixed(1)),
-      parseFloat((Math.max(...valT) + padT).toFixed(1)));
+    dot.className='dot'; document.getElementById('status-text').textContent='histórico';
   }
 
-  if (chartHum) {
-    updateChart(chartHum, filtH, '%');
-  } else {
-    chartHum = makeChart('chart-hum', labH, valH, '#38bdf8', 'rgba(56,189,248,0.08)', '%',
-      Math.max(0,   parseFloat((Math.min(...valH) - padH).toFixed(1))),
-      Math.min(100, parseFloat((Math.max(...valH) + padH).toFixed(1))));
+  // Alertas solo en hoy
+  if (isToday) checkAlerts(last.t);
+  else {
+    document.body.classList.remove('alert-hot','alert-cold');
+    document.getElementById('alert-banner').classList.remove('show');
   }
 
-  updateRangeStats('range-temp', filtT, '°C');
-  updateRangeStats('range-hum',  filtH, '%');
+  // Gráficas
+  const filtT = filterByWindow(data, activeHoursT, 0);
+  const filtH = filterByWindow(data, activeHoursH, 0);
+  const padT  = Math.max(1,(maxT-minT)*0.2), padH = Math.max(2,(maxH-minH)*0.2);
+
+  if (chartTemp) { updateChart(chartTemp, filtT, '°C'); }
+  else { chartTemp = makeChart('chart-temp', filtT.map(d=>fmtTime(d.ts)), filtT.map(d=>d.t), '#f97316','rgba(249,115,22,0.08)','°C', +(minT-padT).toFixed(1), +(maxT+padT).toFixed(1)); }
+
+  if (chartHum) { updateChart(chartHum, filtH, '%'); }
+  else { chartHum = makeChart('chart-hum', filtH.map(d=>fmtTime(d.ts)), filtH.map(d=>d.h), '#38bdf8','rgba(56,189,248,0.08)','%', Math.max(0,+(minH-padH).toFixed(1)), Math.min(100,+(maxH+padH).toFixed(1))); }
+
+  updateChartStats('stats-temp', filtT, '°C');
+  updateChartStats('stats-hum',  filtH, '%');
+
+  // Resetear navegadores de ventana
+  document.getElementById('win-nav-temp').classList.remove('show');
+  document.getElementById('win-nav-hum').classList.remove('show');
 }
 
-async function load() {
+// ---- LOAD DATE ----
+async function loadDate(dateStr) {
+  selectedDate = dateStr;
+  const isToday = dateStr === todayStr();
+
+  showState('loading');
+
   try {
-    const r = await fetch(DATA_URL + '?t=' + Date.now());
-    if (!r.ok) throw new Error('HTTP ' + r.status);
+    const url = RAW_BASE + 'data_' + dateStr + '.json?t=' + Date.now();
+    const r   = await fetch(url);
+
+    if (r.status === 404) { showState('nodata'); return; }
+    if (!r.ok) throw new Error('HTTP '+r.status);
+
     const data = await r.json();
+    if (!Array.isArray(data) || data.length === 0) { showState('nodata'); return; }
 
-    if (!Array.isArray(data) || data.length === 0) {
-      document.getElementById('loading-state').innerHTML =
-        '<div style="padding:4rem 0;color:var(--muted);font-family:DM Mono,monospace;font-size:13px">sin datos todavía</div>';
-      return;
-    }
+    showState('content');
+    render(data, isToday);
 
-    document.getElementById('loading-state').style.display = 'none';
-    document.getElementById('content').style.display = 'block';
-    render(data);
+    // Actualizar label de fecha
+    document.getElementById('date-label').textContent = fmtDateLabel(dateStr);
+
+    // Botón hoy
+    document.getElementById('btn-today').classList.toggle('active', isToday);
+
+    // Flechas de fecha
+    const idx = availDates.indexOf(dateStr);
+    document.getElementById('btn-prev').disabled = idx <= 0;
+    document.getElementById('btn-next').disabled = isToday;
 
   } catch(e) {
-    document.getElementById('loading-state').style.display = 'none';
-    document.getElementById('error-state').style.display = 'block';
-    document.getElementById('status-dot').className = 'dot err';
-    document.getElementById('status-text').textContent = 'error';
+    showState('error');
     console.error(e);
   }
 }
 
-setupRangeButtons();
-load();
-setInterval(load, 5 * 60 * 1000);
+function showState(state) {
+  document.getElementById('loading-state').style.display = state==='loading' ? 'block' : 'none';
+  document.getElementById('no-data-state').style.display = state==='nodata'  ? 'block' : 'none';
+  document.getElementById('error-state').style.display   = state==='error'   ? 'block' : 'none';
+  document.getElementById('content').style.display       = state==='content' ? 'block' : 'none';
+}
+
+// ---- INIT ----
+async function init() {
+  const today = todayStr();
+  document.getElementById('date-input').value = today;
+  document.getElementById('date-input').max   = today;
+
+  // Cargar índice de fechas disponibles
+  try {
+    const r = await fetch(INDEX_URL + '?t=' + Date.now());
+    if (r.ok) {
+      availDates = await r.json();
+      if (!Array.isArray(availDates)) availDates = [];
+      // Asegurarse de que hoy esté en la lista
+      if (!availDates.includes(today)) availDates.push(today);
+      availDates.sort();
+      // Establecer el mínimo del date input
+      if (availDates.length > 0) {
+        document.getElementById('date-input').min = availDates[0];
+      }
+    }
+  } catch(e) {
+    availDates = [today];
+  }
+
+  // Cargar hoy
+  await loadDate(today);
+
+  // Refresco automático cada 5 min si estamos en hoy
+  setInterval(() => {
+    if (selectedDate === todayStr()) loadDate(todayStr());
+  }, 5 * 60 * 1000);
+}
+
+// ---- EVENTS ----
+
+// Date input
+document.getElementById('date-input').addEventListener('change', e => {
+  loadDate(e.target.value);
+});
+
+// Flechas de fecha
+document.getElementById('btn-prev').addEventListener('click', () => {
+  const idx = availDates.indexOf(selectedDate);
+  if (idx > 0) {
+    const d = availDates[idx-1];
+    document.getElementById('date-input').value = d;
+    loadDate(d);
+  }
+});
+document.getElementById('btn-next').addEventListener('click', () => {
+  const idx = availDates.indexOf(selectedDate);
+  const next = idx >= 0 && idx < availDates.length-1 ? availDates[idx+1] : todayStr();
+  document.getElementById('date-input').value = next;
+  loadDate(next);
+});
+document.getElementById('btn-today').addEventListener('click', () => {
+  const today = todayStr();
+  document.getElementById('date-input').value = today;
+  loadDate(today);
+});
+
+// Range buttons
+document.querySelectorAll('.range-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const hours = parseInt(btn.dataset.h);
+    const ct    = btn.dataset.chart;
+    btn.closest('.range-selector').querySelectorAll('.range-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    if (ct === 'temp') { activeHoursT = hours; winOffsetT = 0; refreshChart('temp'); }
+    else               { activeHoursH = hours; winOffsetH = 0; refreshChart('hum');  }
+  });
+});
+
+// Window nav — temperatura
+document.getElementById('win-prev-temp').addEventListener('click', () => { winOffsetT++; refreshChart('temp'); });
+document.getElementById('win-next-temp').addEventListener('click', () => { if (winOffsetT > 0) { winOffsetT--; refreshChart('temp'); } });
+
+// Window nav — humedad
+document.getElementById('win-prev-hum').addEventListener('click', () => { winOffsetH++; refreshChart('hum'); });
+document.getElementById('win-next-hum').addEventListener('click', () => { if (winOffsetH > 0) { winOffsetH--; refreshChart('hum'); } });
+
+init();
 </script>
 </body>
 </html>
