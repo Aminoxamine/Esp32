@@ -2879,3 +2879,29 @@ wnout
 [09:59:30] [SENSOR] T=22.7C H=67.0%
 [10:00:30] [SENSOR] T=22.7C H=67.0%
 [10:01:30] [SENSOR] T=22.7C H=67.0%
+[10:02:28] [DATA] 10 entradas subidas
+[10:02:30] [SENSOR] T=22.8C H=67.0%
+[10:03:30] [SENSOR] T=22.8C H=67.0%
+[10:04:30] [SENSOR] T=22.8C H=67.0%
+[10:05:30] [SENSOR] T=22.8C H=67.0%
+[10:06:30] [SENSOR] T=22.8C H=67.0%
+[10:07:30] [SENSOR] T=22.8C H=67.0%
+[10:08:30] [SENSOR] T=22.8C H=67.0%
+[10:09:30] [SENSOR] T=22.7C H=67.0%
+[10:10:30] [SENSOR] T=22.8C H=67.0%
+[10:11:30] [SENSOR] T=22.8C H=67.0%
+--------------------2026-04-22--------------------
+[10:13:31] === INICIANDO v11 boot#186 ===
+[10:13:31] [RESET] Watchdog tarea
+[10:13:31] [INFO] RAM:274744b Boot#186 v11
+[10:13:31] [BUFFER] 10 entradas pendientes al arrancar
+[10:14:32] Sin Wi-Fi al arrancar.
+[10:14:33] [SENSOR] T=22.7C H=67.0%
+[10:15:33] [SENSOR] T=22.8C H=67.0%
+[10:16:33] [SENSOR] T=22.8C H=67.0%
+[10:17:33] [SENSOR] T=22.8C H=67.0%
+[10:18:33] [SENSOR] T=22.8C H=66.0%
+[10:19:33] [SENSOR] T=22.8C H=66.0%
+[10:20:33] [SENSOR] T=22.7C H=65.0%
+[10:21:33] [SENSOR] T=22.8C H=66.0%
+[10:22:33] [SENSOR] T=22.7C H=65.0%
