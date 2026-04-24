@@ -2920,3 +2920,12 @@ wnout
 [08:45:11] ERROR SENSOR: fallo persistente
 [08:48:11] ERROR SENSOR: fallo persistente
 [08:51:11] ERROR SENSOR: fallo persistente
+[08:54:11] ERROR SENSOR: fallo persistente
+[08:57:11] ERROR SENSOR: fallo persistente
+--------------------1970-01-01--------------------
+[00:00:01] === INICIANDO v11 boot#188 ===
+[00:00:01] [RESET] Encendido normal
+[00:00:01] [INFO] RAM:274744b Boot#188 v11
+--------------------2026-04-24--------------------
+[08:59:57] [WEB] http://10.249.94.118
+[08:59:57] WiFi OK. IP: 10.249.94.118
