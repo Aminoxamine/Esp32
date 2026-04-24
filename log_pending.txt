@@ -1,1 +1,6 @@
-
+[09:09:32] [DATA] 5 entradas subidas
+[09:09:34] [SENSOR] T=22.5C H=67.0%
+[09:10:34] [SENSOR] T=22.4C H=67.0%
+[09:11:34] [SENSOR] T=22.6C H=67.0%
+[09:12:34] [SENSOR] T=22.4C H=67.0%
+[09:13:34] [SENSOR] T=22.3C H=67.0%
