@@ -2974,3 +2974,23 @@ wnout
 [09:31:34] [SENSOR] T=22.3C H=67.0%
 [09:32:34] [SENSOR] T=22.2C H=66.0%
 [09:33:34] [SENSOR] T=22.2C H=67.0%
+[09:34:46] [DATA] 9 entradas subidas
+[09:34:48] [SENSOR] T=22.3C H=66.0%
+[09:35:48] [SENSOR] T=22.3C H=67.0%
+[09:36:48] [SENSOR] T=22.3C H=67.0%
+[09:37:48] [SENSOR] T=22.3C H=67.0%
+[09:38:48] [SENSOR] T=22.3C H=67.0%
+--------------------2026-04-24--------------------
+[07:39:41] === INICIANDO v11 boot#190 ===
+[07:39:41] [RESET] Watchdog tarea
+[07:39:41] [INFO] RAM:274744b Boot#190 v11
+[07:39:41] [BUFFER] 5 entradas pendientes al arrancar
+[09:40:17] [WEB] http://10.249.94.118
+[09:40:17] WiFi OK. IP: 10.249.94.118
+--------------------2026-04-24--------------------
+[07:40:22] === INICIANDO v11 boot#191 ===
+[07:40:22] [RESET] Watchdog tarea
+[07:40:22] [INFO] RAM:274744b Boot#191 v11
+[07:40:22] [BUFFER] 5 entradas pendientes al arrancar
+[09:40:57] [WEB] http://10.249.94.118
+[09:40:57] WiFi OK. IP: 10.249.94.118
