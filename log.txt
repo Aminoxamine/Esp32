@@ -3261,3 +3261,10 @@ wnout
 [13:57:17] [SENSOR] T=23.1C H=67.0% P=--hPa L=-2lux Rain=SI
 [13:58:17] [SENSOR] T=23.1C H=67.0% P=--hPa L=-2lux Rain=SI
 [13:59:17] [SENSOR] T=23.2C H=67.0% P=--hPa L=-2lux Rain=SI
+[14:00:15] [DATA] 5 entradas subidas
+[14:00:17] [SENSOR] T=23.2C H=67.0% P=--hPa L=-2lux Rain=SI
+[14:01:17] [SENSOR] T=23.2C H=67.0% P=--hPa L=-2lux Rain=SI
+[14:02:17] [SENSOR] T=23.2C H=67.0% P=--hPa L=-2lux Rain=SI
+[14:03:17] [SENSOR] T=23.2C H=67.0% P=--hPa L=-2lux Rain=SI
+[14:04:17] [SENSOR] T=23.2C H=67.0% P=--hPa L=-2lux Rain=SI
+[14:05:30] OTA completada v13. Reiniciando...
