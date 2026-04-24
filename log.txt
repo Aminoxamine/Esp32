@@ -3327,3 +3327,7 @@ wnout
 --------------------2026-04-24--------------------
 [14:50:27] [WEB] http://10.249.94.118
 [14:50:27] WiFi OK. IP: 10.249.94.118
+[14:50:52] [SENSOR] T=23.4C H=67.0% P=--hPa L=-2lux Rain=SI
+[14:51:53] [SENSOR] T=23.3C H=67.0% P=--hPa L=-2lux Rain=SI
+[14:52:53] [SENSOR] T=23.3C H=67.0% P=--hPa L=-2lux Rain=SI
+[14:53:53] [SENSOR] T=23.3C H=67.0% P=--hPa L=-2lux Rain=SI
