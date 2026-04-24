@@ -2919,3 +2919,4 @@ wnout
 [08:44:02] [DATA] 2 entradas subidas
 [08:45:11] ERROR SENSOR: fallo persistente
 [08:48:11] ERROR SENSOR: fallo persistente
+[08:51:11] ERROR SENSOR: fallo persistente
