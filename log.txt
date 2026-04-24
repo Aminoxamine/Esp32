@@ -3070,3 +3070,7 @@ wnout
 [08:24:44] [BUFFER] 3 entradas pendientes al arrancar
 [10:25:16] [WEB] http://10.249.94.118
 [10:25:16] WiFi OK. IP: 10.249.94.118
+[10:25:43] [SENSOR] T=22.4C H=67.0% P=--hPa L=-2lux Rain=SI
+[10:26:43] [SENSOR] T=22.1C H=67.0% P=--hPa L=-2lux Rain=SI
+[10:27:43] [SENSOR] T=22.3C H=67.0% P=--hPa L=-2lux Rain=SI
+[10:28:43] [SENSOR] T=22.3C H=67.0% P=--hPa L=-2lux Rain=SI
