@@ -1,1 +1,6 @@
-
+[13:50:14] [DATA] 141 entradas subidas
+[13:50:17] [SENSOR] T=23.0C H=66.0% P=--hPa L=-2lux Rain=SI
+[13:51:17] [SENSOR] T=23.1C H=66.0% P=--hPa L=-2lux Rain=SI
+[13:52:17] [SENSOR] T=23.1C H=66.0% P=--hPa L=-2lux Rain=SI
+[13:53:17] [SENSOR] T=23.1C H=66.0% P=--hPa L=-2lux Rain=SI
+[13:54:17] [SENSOR] T=23.1C H=67.0% P=--hPa L=-2lux Rain=SI
