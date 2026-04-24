@@ -1,1 +1,7 @@
-
+--------------------2026-04-24--------------------
+[08:24:44] === INICIANDO v12 boot#195 ===
+[08:24:44] [RESET] Reset software
+[08:24:44] [INFO] RAM:269476b Boot#195 v12
+[08:24:44] [BUFFER] 3 entradas pendientes al arrancar
+[10:25:16] [WEB] http://10.249.94.118
+[10:25:16] WiFi OK. IP: 10.249.94.118
