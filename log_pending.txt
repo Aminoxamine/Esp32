@@ -1,1 +1,34 @@
-
+[11:22:09] [SENSOR] T=22.6C H=66.0% P=--hPa L=-2lux Rain=SI
+[11:23:09] [SENSOR] T=22.6C H=66.0% P=--hPa L=-2lux Rain=SI
+[11:24:09] [SENSOR] T=22.6C H=66.0% P=--hPa L=-2lux Rain=SI
+[11:25:09] [SENSOR] T=22.6C H=66.0% P=--hPa L=-2lux Rain=SI
+[11:26:09] [SENSOR] T=22.6C H=66.0% P=--hPa L=-2lux Rain=SI
+[11:27:09] [SENSOR] T=22.7C H=66.0% P=--hPa L=-2lux Rain=SI
+[11:29:09] [SENSOR] T=22.7C H=66.0% P=--hPa L=-2lux Rain=SI
+[11:30:09] [SENSOR] T=22.7C H=66.0% P=--hPa L=-2lux Rain=SI
+[11:31:09] [SENSOR] T=22.8C H=66.0% P=--hPa L=-2lux Rain=SI
+[11:32:09] [SENSOR] T=22.7C H=66.0% P=--hPa L=-2lux Rain=SI
+[11:33:09] [SENSOR] T=22.7C H=66.0% P=--hPa L=-2lux Rain=SI
+[11:34:09] [SENSOR] T=22.8C H=66.0% P=--hPa L=-2lux Rain=SI
+[11:35:09] [SENSOR] T=22.7C H=66.0% P=--hPa L=-2lux Rain=SI
+[11:36:09] [SENSOR] T=22.7C H=66.0% P=--hPa L=-2lux Rain=SI
+[11:37:09] [SENSOR] T=22.7C H=66.0% P=--hPa L=-2lux Rain=SI
+[11:38:09] [SENSOR] T=22.8C H=66.0% P=--hPa L=-2lux Rain=SI
+[11:39:09] [SENSOR] T=22.9C H=67.0% P=--hPa L=-2lux Rain=SI
+[11:40:09] [SENSOR] T=22.9C H=67.0% P=--hPa L=-2lux Rain=SI
+[11:41:09] [SENSOR] T=23.0C H=66.0% P=--hPa L=-2lux Rain=SI
+[11:42:09] [SENSOR] T=22.9C H=66.0% P=--hPa L=-2lux Rain=SI
+[11:43:09] [SENSOR] T=23.1C H=67.0% P=--hPa L=-2lux Rain=SI
+[11:44:09] [SENSOR] T=23.1C H=66.0% P=--hPa L=-2lux Rain=SI
+--------------------1970-01-01--------------------
+[00:00:01] === INICIANDO v12 boot#200 ===
+[00:00:01] [RESET] Encendido normal
+[00:00:01] [INFO] RAM:269476b Boot#200 v12
+[00:00:01] [BUFFER] 137 entradas pendientes al arrancar
+--------------------2026-04-24--------------------
+[13:45:41] [WEB] http://10.249.94.118
+[13:45:41] WiFi OK. IP: 10.249.94.118
+[13:46:05] [SENSOR] T=23.1C H=66.0% P=--hPa L=-2lux Rain=SI
+[13:47:05] [SENSOR] T=23.1C H=66.0% P=--hPa L=-2lux Rain=SI
+[13:48:05] [SENSOR] T=23.1C H=66.0% P=--hPa L=-2lux Rain=SI
+[13:49:05] [SENSOR] T=23.1C H=66.0% P=--hPa L=-2lux Rain=SI
