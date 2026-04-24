@@ -1,13 +1,1 @@
-[09:55:42] [DATA] 5 entradas subidas
-[09:55:45] [SENSOR] T=22.0C H=67.0%
-[09:56:46] [SENSOR] T=22.1C H=67.0%
-[09:57:45] [SENSOR] T=22.0C H=67.0%
-[09:58:46] [SENSOR] T=22.1C H=67.0%
-[09:59:46] [SENSOR] T=22.0C H=67.0%
---------------------2026-04-24--------------------
-[08:00:43] === INICIANDO v11 boot#193 ===
-[08:00:43] [RESET] Watchdog tarea
-[08:00:43] [INFO] RAM:274744b Boot#193 v11
-[08:00:43] [BUFFER] 5 entradas pendientes al arrancar
-[10:01:21] [WEB] http://10.249.94.118
-[10:01:21] WiFi OK. IP: 10.249.94.118
+
