@@ -1,1 +1,69 @@
-
+[10:29:53] [DATA] 7 entradas subidas
+[10:29:56] [SENSOR] T=22.4C H=67.0% P=--hPa L=-2lux Rain=SI
+[10:30:56] [SENSOR] T=22.4C H=67.0% P=--hPa L=-2lux Rain=SI
+[10:31:56] [SENSOR] T=22.5C H=67.0% P=--hPa L=-2lux Rain=SI
+[10:32:56] [SENSOR] T=22.4C H=67.0% P=--hPa L=-2lux Rain=SI
+[10:33:56] [SENSOR] T=22.5C H=67.0% P=--hPa L=-2lux Rain=SI
+--------------------2026-04-24--------------------
+[08:34:56] === INICIANDO v12 boot#196 ===
+[08:34:56] [RESET] Watchdog tarea
+[08:34:56] [INFO] RAM:269476b Boot#196 v12
+[08:34:56] [BUFFER] 5 entradas pendientes al arrancar
+[08:35:57] Sin Wi-Fi al arrancar.
+[08:35:58] [SENSOR] T=22.4C H=67.0% P=--hPa L=-2lux Rain=SI
+[08:36:58] [SENSOR] T=22.4C H=67.0% P=--hPa L=-2lux Rain=SI
+[08:37:58] [SENSOR] T=22.4C H=67.0% P=--hPa L=-2lux Rain=SI
+[08:38:58] [SENSOR] T=22.4C H=67.0% P=--hPa L=-2lux Rain=SI
+[08:39:58] [SENSOR] T=22.5C H=67.0% P=--hPa L=-2lux Rain=SI
+[08:40:58] [SENSOR] T=22.5C H=67.0% P=--hPa L=-2lux Rain=SI
+[08:41:58] [SENSOR] T=22.5C H=67.0% P=--hPa L=-2lux Rain=SI
+[08:42:58] [SENSOR] T=22.5C H=67.0% P=--hPa L=-2lux Rain=SI
+[08:43:58] [SENSOR] T=22.5C H=67.0% P=--hPa L=-2lux Rain=SI
+[08:45:56] [SENSOR] T=22.5C H=67.0% P=--hPa L=-2lux Rain=SI
+[08:46:56] [SENSOR] T=22.5C H=67.0% P=--hPa L=-2lux Rain=SI
+[08:47:56] [SENSOR] T=22.5C H=67.0% P=--hPa L=-2lux Rain=SI
+[08:48:56] [SENSOR] T=22.5C H=67.0% P=--hPa L=-2lux Rain=SI
+[08:49:56] [SENSOR] T=22.5C H=67.0% P=--hPa L=-2lux Rain=SI
+[08:50:56] [SENSOR] T=22.5C H=67.0% P=--hPa L=-2lux Rain=SI
+[08:51:56] [SENSOR] T=22.5C H=67.0% P=--hPa L=-2lux Rain=SI
+[08:52:56] [SENSOR] T=22.5C H=67.0% P=--hPa L=-2lux Rain=SI
+[08:53:56] [SENSOR] T=22.5C H=67.0% P=--hPa L=-2lux Rain=SI
+[08:54:56] [SENSOR] T=22.5C H=67.0% P=--hPa L=-2lux Rain=SI
+[08:55:56] [SENSOR] T=22.5C H=67.0% P=--hPa L=-2lux Rain=SI
+[08:56:56] [SENSOR] T=22.5C H=67.0% P=--hPa L=-2lux Rain=SI
+[08:57:56] [SENSOR] T=22.5C H=67.0% P=--hPa L=-2lux Rain=SI
+[08:58:56] [SENSOR] T=22.6C H=67.0% P=--hPa L=-2lux Rain=SI
+[08:59:56] [SENSOR] T=22.6C H=67.0% P=--hPa L=-2lux Rain=SI
+[09:00:56] [SENSOR] T=22.6C H=67.0% P=--hPa L=-2lux Rain=SI
+[09:01:56] [SENSOR] T=22.6C H=67.0% P=--hPa L=-2lux Rain=SI
+[09:02:56] [SENSOR] T=22.6C H=67.0% P=--hPa L=-2lux Rain=SI
+[09:03:56] [SENSOR] T=22.6C H=67.0% P=--hPa L=-2lux Rain=SI
+[09:05:56] [SENSOR] T=22.6C H=67.0% P=--hPa L=-2lux Rain=SI
+[09:06:56] [SENSOR] T=22.6C H=67.0% P=--hPa L=-2lux Rain=SI
+[09:07:56] [SENSOR] T=22.7C H=67.0% P=--hPa L=-2lux Rain=SI
+[09:08:56] [SENSOR] T=22.6C H=67.0% P=--hPa L=-2lux Rain=SI
+[09:09:56] [SENSOR] T=22.5C H=67.0% P=--hPa L=-2lux Rain=SI
+[09:10:56] [SENSOR] T=22.6C H=67.0% P=--hPa L=-2lux Rain=SI
+[09:11:56] [SENSOR] T=22.6C H=67.0% P=--hPa L=-2lux Rain=SI
+[09:12:56] [SENSOR] T=22.6C H=67.0% P=--hPa L=-2lux Rain=SI
+[09:13:56] [SENSOR] T=22.6C H=66.0% P=--hPa L=-2lux Rain=SI
+[09:14:56] [SENSOR] T=22.6C H=66.0% P=--hPa L=-2lux Rain=SI
+[09:15:56] [SENSOR] T=22.6C H=66.0% P=--hPa L=-2lux Rain=SI
+[09:16:56] [SENSOR] T=22.6C H=67.0% P=--hPa L=-2lux Rain=SI
+[09:17:56] [SENSOR] T=22.6C H=66.0% P=--hPa L=-2lux Rain=SI
+[09:18:56] [SENSOR] T=22.6C H=67.0% P=--hPa L=-2lux Rain=SI
+[09:19:56] [SENSOR] T=22.6C H=66.0% P=--hPa L=-2lux Rain=SI
+[09:20:56] [SENSOR] T=22.6C H=66.0% P=--hPa L=-2lux Rain=SI
+[09:21:56] [SENSOR] T=22.6C H=67.0% P=--hPa L=-2lux Rain=SI
+[09:22:56] [SENSOR] T=22.6C H=66.0% P=--hPa L=-2lux Rain=SI
+[09:23:56] [SENSOR] T=22.6C H=66.0% P=--hPa L=-2lux Rain=SI
+[09:24:56] [SENSOR] T=22.6C H=67.0% P=--hPa L=-2lux Rain=SI
+[09:25:56] [SENSOR] T=22.7C H=66.0% P=--hPa L=-2lux Rain=SI
+[09:26:56] [SENSOR] T=22.7C H=67.0% P=--hPa L=-2lux Rain=SI
+[09:27:56] [SENSOR] T=22.7C H=67.0% P=--hPa L=-2lux Rain=SI
+[09:28:56] [SENSOR] T=22.7C H=67.0% P=--hPa L=-2lux Rain=SI
+[09:29:56] [SENSOR] T=22.6C H=67.0% P=--hPa L=-2lux Rain=SI
+[09:30:56] [SENSOR] T=22.6C H=66.0% P=--hPa L=-2lux Rain=SI
+[09:31:56] [SENSOR] T=22.7C H=67.0% P=--hPa L=-2lux Rain=SI
+[09:32:56] [SENSOR] T=22.7C H=66.0% P=--hPa L=-2lux Rain=SI
+[09:33:56] [SENSOR] T=22.6C H=66.0% P=--hPa L=-2lux Rain=SI
