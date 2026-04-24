@@ -3268,3 +3268,10 @@ wnout
 [14:03:17] [SENSOR] T=23.2C H=67.0% P=--hPa L=-2lux Rain=SI
 [14:04:17] [SENSOR] T=23.2C H=67.0% P=--hPa L=-2lux Rain=SI
 [14:05:30] OTA completada v13. Reiniciando...
+--------------------2026-04-24--------------------
+[12:05:38] === INICIANDO v13 boot#201 ===
+[12:05:38] [RESET] Reset software
+[12:05:38] [INFO] RAM:269476b Boot#201 v13
+[12:05:38] [BUFFER] 5 entradas pendientes al arrancar
+[14:06:11] [WEB] http://10.249.94.118
+[14:06:11] WiFi OK. IP: 10.249.94.118
