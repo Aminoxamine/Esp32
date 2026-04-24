@@ -3005,3 +3005,7 @@ wnout
 [07:45:37] [BUFFER] 9 entradas pendientes al arrancar
 [09:46:09] [WEB] http://10.249.94.118
 [09:46:09] WiFi OK. IP: 10.249.94.118
+[09:46:34] [SENSOR] T=22.2C H=67.0%
+[09:47:34] [SENSOR] T=22.1C H=67.0%
+[09:48:34] [SENSOR] T=22.2C H=67.0%
+[09:49:34] [SENSOR] T=22.2C H=67.0%
