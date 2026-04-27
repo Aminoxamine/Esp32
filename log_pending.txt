@@ -1,1 +1,72 @@
-
+[14:55:06] [SENSOR] T=23.3C H=67.0% P=--hPa L=-2lux Rain=SI
+[14:56:06] [SENSOR] T=23.4C H=67.0% P=--hPa L=-2lux Rain=SI
+[14:57:06] [SENSOR] T=23.3C H=67.0% P=--hPa L=-2lux Rain=SI
+[14:58:06] [SENSOR] T=23.3C H=67.0% P=--hPa L=-2lux Rain=SI
+[14:59:06] [SENSOR] T=23.4C H=67.0% P=--hPa L=-2lux Rain=SI
+--------------------1970-01-01--------------------
+[00:00:01] === INICIANDO v13 boot#203 ===
+[00:00:01] [RESET] Encendido normal
+[00:00:01] [INFO] RAM:269476b Boot#203 v13
+[00:00:01] [BUFFER] 42 entradas pendientes al arrancar
+[00:01:02] Sin Wi-Fi al arrancar.
+[00:01:03] [SENSOR] T=22.0C H=70.0% P=--hPa L=-2lux Rain=SI
+[00:02:03] [SENSOR] T=22.1C H=70.0% P=--hPa L=-2lux Rain=SI
+[00:03:03] [SENSOR] T=22.2C H=70.0% P=--hPa L=-2lux Rain=SI
+[00:04:03] [SENSOR] T=22.1C H=69.0% P=--hPa L=-2lux Rain=SI
+[00:05:03] [SENSOR] T=22.2C H=69.0% P=--hPa L=-2lux Rain=SI
+[00:06:03] [SENSOR] T=22.2C H=70.0% P=--hPa L=-2lux Rain=SI
+[00:07:03] [SENSOR] T=22.1C H=70.0% P=--hPa L=-2lux Rain=SI
+[00:08:03] [SENSOR] T=22.1C H=70.0% P=--hPa L=-2lux Rain=SI
+[00:09:03] [SENSOR] T=22.1C H=70.0% P=--hPa L=-2lux Rain=SI
+[00:11:01] [SENSOR] T=22.1C H=70.0% P=--hPa L=-2lux Rain=SI
+[00:12:01] [SENSOR] T=22.1C H=70.0% P=--hPa L=-2lux Rain=SI
+[00:13:01] [SENSOR] T=22.1C H=70.0% P=--hPa L=-2lux Rain=SI
+[00:14:01] [SENSOR] T=22.1C H=70.0% P=--hPa L=-2lux Rain=SI
+--------------------1970-01-01--------------------
+[00:00:01] === INICIANDO v13 boot#204 ===
+[00:00:01] [RESET] Encendido normal
+[00:00:01] [INFO] RAM:269476b Boot#204 v13
+[00:00:01] [BUFFER] 55 entradas pendientes al arrancar
+[00:01:02] Sin Wi-Fi al arrancar.
+[00:01:03] [SENSOR] T=22.3C H=67.0% P=--hPa L=-2lux Rain=SI
+[00:02:03] [SENSOR] T=22.2C H=70.0% P=--hPa L=-2lux Rain=SI
+[00:03:03] [SENSOR] T=22.2C H=70.0% P=--hPa L=-2lux Rain=SI
+[00:04:03] [SENSOR] T=22.1C H=70.0% P=--hPa L=-2lux Rain=SI
+[00:05:03] [SENSOR] T=22.2C H=70.0% P=--hPa L=-2lux Rain=SI
+[00:06:03] [SENSOR] T=22.2C H=70.0% P=--hPa L=-2lux Rain=SI
+[00:07:03] [SENSOR] T=22.2C H=70.0% P=--hPa L=-2lux Rain=SI
+[00:08:03] [SENSOR] T=22.2C H=70.0% P=--hPa L=-2lux Rain=SI
+--------------------1970-01-01--------------------
+[00:00:01] === INICIANDO v13 boot#205 ===
+[00:00:01] [RESET] Encendido normal
+[00:00:01] [INFO] RAM:269476b Boot#205 v13
+[00:00:01] [BUFFER] 63 entradas pendientes al arrancar
+[00:01:02] Sin Wi-Fi al arrancar.
+[00:01:03] [SENSOR] T=22.3C H=67.0% P=--hPa L=-2lux Rain=SI
+[00:02:03] [SENSOR] T=22.2C H=70.0% P=--hPa L=-2lux Rain=SI
+[00:03:03] [SENSOR] T=22.2C H=70.0% P=--hPa L=-2lux Rain=SI
+[00:04:03] [SENSOR] T=22.2C H=70.0% P=--hPa L=-2lux Rain=SI
+[00:05:03] [SENSOR] T=22.2C H=70.0% P=--hPa L=-2lux Rain=SI
+[00:06:03] [SENSOR] T=22.3C H=70.0% P=--hPa L=-2lux Rain=SI
+[00:07:03] [SENSOR] T=22.2C H=70.0% P=--hPa L=-2lux Rain=SI
+[00:08:03] [SENSOR] T=22.3C H=70.0% P=--hPa L=-2lux Rain=SI
+[00:09:03] [SENSOR] T=22.2C H=70.0% P=--hPa L=-2lux Rain=SI
+[00:11:01] [SENSOR] T=22.3C H=71.0% P=--hPa L=-2lux Rain=SI
+[00:12:01] [SENSOR] T=22.3C H=69.0% P=--hPa L=-2lux Rain=SI
+[00:13:01] [SENSOR] T=22.1C H=70.0% P=--hPa L=-2lux Rain=SI
+[00:14:01] [SENSOR] T=21.9C H=69.0% P=--hPa L=-2lux Rain=SI
+[00:15:01] [SENSOR] T=21.8C H=69.0% P=--hPa L=-2lux Rain=SI
+[00:16:01] [SENSOR] T=21.9C H=69.0% P=--hPa L=-2lux Rain=SI
+[00:17:01] [SENSOR] T=21.9C H=69.0% P=--hPa L=-2lux Rain=SI
+[00:18:01] [SENSOR] T=22.0C H=70.0% P=--hPa L=-2lux Rain=SI
+[00:19:01] [SENSOR] T=22.0C H=70.0% P=--hPa L=-2lux Rain=SI
+[00:20:01] [SENSOR] T=22.0C H=70.0% P=--hPa L=-2lux Rain=SI
+[00:21:01] [SENSOR] T=22.1C H=70.0% P=--hPa L=-2lux Rain=SI
+[00:22:01] [SENSOR] T=22.1C H=70.0% P=--hPa L=-2lux Rain=SI
+[00:23:01] [SENSOR] T=22.1C H=70.0% P=--hPa L=-2lux Rain=SI
+[00:24:01] [SENSOR] T=22.1C H=70.0% P=--hPa L=-2lux Rain=SI
+[00:25:01] [SENSOR] T=22.1C H=70.0% P=--hPa L=-2lux Rain=SI
+[00:26:01] [SENSOR] T=22.1C H=70.0% P=--hPa L=-2lux Rain=SI
+[00:27:01] [SENSOR] T=22.1C H=70.0% P=--hPa L=-2lux Rain=SI
+[00:28:01] [SENSOR] T=22.1C H=70.0% P=--hPa L=-2lux Rain=SI
+[00:29:01] [SENSOR] T=22.1C H=70.0% P=--hPa L=-2lux Rain=SI
