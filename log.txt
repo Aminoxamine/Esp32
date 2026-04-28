@@ -3878,3 +3878,9 @@ wnout
 [10:46:39] [SENSOR] T=22.6C H=71.0% P=--hPa L=-2lux Rain=SI
 [10:47:39] [SENSOR] T=22.5C H=71.0% P=--hPa L=-2lux Rain=SI
 [10:48:39] [SENSOR] T=22.7C H=70.0% P=--hPa L=-2lux Rain=SI
+[10:48:55] [DATA] 20 entradas subidas. Pendientes: 165
+[10:49:39] [SENSOR] T=22.7C H=70.0% P=--hPa L=-2lux Rain=SI
+[10:50:39] [SENSOR] T=22.8C H=70.0% P=--hPa L=-2lux Rain=SI
+[10:51:39] [SENSOR] T=22.8C H=70.0% P=--hPa L=-2lux Rain=SI
+[10:52:39] [SENSOR] T=22.8C H=70.0% P=--hPa L=-2lux Rain=SI
+[10:53:39] [SENSOR] T=22.8C H=70.0% P=--hPa L=-2lux Rain=SI
