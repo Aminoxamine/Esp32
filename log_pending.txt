@@ -1,7 +1,1 @@
---------------------2026-04-28--------------------
-[09:24:26] === INICIANDO v13 boot#214 ===
-[09:24:26] [RESET] Watchdog tarea
-[09:24:26] [INFO] RAM:269476b Boot#214 v13
-[09:24:26] [BUFFER] 100 entradas pendientes al arrancar
-[11:24:58] [WEB] http://10.218.116.118
-[11:24:59] WiFi OK. IP: 10.218.116.118
+
