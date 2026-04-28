@@ -1,1 +1,6 @@
-
+[11:03:54] [DATA] 20 entradas subidas. Pendientes: 120
+[11:04:39] [SENSOR] T=22.8C H=70.0% P=--hPa L=-2lux Rain=SI
+[11:05:39] [SENSOR] T=22.8C H=71.0% P=--hPa L=-2lux Rain=SI
+[11:06:39] [SENSOR] T=22.8C H=71.0% P=--hPa L=-2lux Rain=SI
+[11:07:39] [SENSOR] T=22.8C H=70.0% P=--hPa L=-2lux Rain=SI
+[11:08:39] [SENSOR] T=22.8C H=71.0% P=--hPa L=-2lux Rain=SI
