@@ -4073,3 +4073,8 @@ wnout
 [14:27:33] [SENSOR] T=23.1C H=72.0% P=--hPa L=-2lux Rain=SI
 [14:28:33] [SENSOR] T=23.1C H=72.0% P=--hPa L=-2lux Rain=SI
 [14:29:33] [SENSOR] T=23.1C H=72.0% P=--hPa L=-2lux Rain=SI
+[14:30:33] [SENSOR] T=23.1C H=72.0% P=--hPa L=-2lux Rain=SI
+[14:31:33] [SENSOR] T=23.1C H=72.0% P=--hPa L=-2lux Rain=SI
+[14:32:33] [SENSOR] T=23.1C H=72.0% P=--hPa L=-2lux Rain=SI
+[14:33:33] [SENSOR] T=23.1C H=72.0% P=--hPa L=-2lux Rain=SI
+[14:34:33] [SENSOR] T=23.1C H=72.0% P=--hPa L=-2lux Rain=SI
