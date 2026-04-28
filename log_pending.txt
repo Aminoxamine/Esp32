@@ -1,12 +1,1 @@
-[13:50:26] [SENSOR] T=23.2C H=71.0% P=--hPa L=-2lux Rain=SI
-[13:51:26] [SENSOR] T=23.2C H=71.0% P=--hPa L=-2lux Rain=SI
-[13:52:26] [SENSOR] T=23.2C H=71.0% P=--hPa L=-2lux Rain=SI
-[13:53:26] [SENSOR] T=23.2C H=71.0% P=--hPa L=-2lux Rain=SI
-[13:54:26] [SENSOR] T=23.2C H=71.0% P=--hPa L=-2lux Rain=SI
---------------------2026-04-28--------------------
-[11:55:17] === INICIANDO v13 boot#219 ===
-[11:55:17] [RESET] Watchdog tarea
-[11:55:17] [INFO] RAM:269476b Boot#219 v13
-[11:55:17] [BUFFER] 104 entradas pendientes al arrancar
-[13:56:10] [WEB] http://10.218.116.118
-[13:56:10] WiFi OK. IP: 10.218.116.118
+
