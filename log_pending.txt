@@ -1,5 +1,1 @@
-[11:19:39] [SENSOR] T=23.0C H=70.0% P=--hPa L=-2lux Rain=SI
-[11:20:39] [SENSOR] T=23.0C H=70.0% P=--hPa L=-2lux Rain=SI
-[11:21:39] [SENSOR] T=23.0C H=70.0% P=--hPa L=-2lux Rain=SI
-[11:22:39] [SENSOR] T=23.0C H=70.0% P=--hPa L=-2lux Rain=SI
-[11:23:39] [SENSOR] T=23.0C H=70.0% P=--hPa L=-2lux Rain=SI
+
