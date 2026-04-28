@@ -4039,3 +4039,7 @@ wnout
 [11:55:17] [BUFFER] 104 entradas pendientes al arrancar
 [13:56:10] [WEB] http://10.218.116.118
 [13:56:10] WiFi OK. IP: 10.218.116.118
+[13:56:19] [SENSOR] T=23.2C H=71.0% P=--hPa L=-2lux Rain=SI
+[13:57:19] [SENSOR] T=23.2C H=71.0% P=--hPa L=-2lux Rain=SI
+[13:58:19] [SENSOR] T=23.2C H=71.0% P=--hPa L=-2lux Rain=SI
+[13:59:19] [SENSOR] T=23.2C H=70.0% P=--hPa L=-2lux Rain=SI
