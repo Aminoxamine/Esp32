@@ -4129,3 +4129,69 @@ wnout
 [07:31:50] [BUFFER] 170 entradas pendientes al arrancar
 [09:32:22] [WEB] http://10.218.116.118
 [09:32:22] WiFi OK. IP: 10.218.116.118 Reloj: NTP
+[09:32:49] [SENSOR] T=23.4C H=71.0% P=--hPa L=-2lux Rain=SI ok=1
+[09:33:49] [SENSOR] T=23.3C H=71.0% P=--hPa L=-2lux Rain=SI ok=1
+[09:34:49] [SENSOR] T=23.4C H=71.0% P=--hPa L=-2lux Rain=SI ok=1
+[09:35:49] [SENSOR] T=23.3C H=71.0% P=--hPa L=-2lux Rain=SI ok=1
+--------------------2026-04-29--------------------
+[07:32:22] === INICIANDO v14 boot#223 ===
+[07:32:22] [RESET] Watchdog tarea
+[07:32:22] [INFO] RAM:269500b Boot#223 v14
+[07:32:22] [BUFFER] 174 entradas pendientes al arrancar
+[09:33:08] [WEB] http://10.218.116.118
+[09:33:08] WiFi OK. IP: 10.218.116.118 Reloj: NTP
+--------------------2026-04-29--------------------
+[07:33:08] === INICIANDO v14 boot#224 ===
+[07:33:08] [RESET] Watchdog tarea
+[07:33:08] [INFO] RAM:269500b Boot#224 v14
+[07:33:08] [BUFFER] 174 entradas pendientes al arrancar
+[07:34:09] Sin Wi-Fi al arrancar.
+[07:34:10] [SENSOR] T=23.3C H=71.0% P=--hPa L=-2lux Rain=SI ok=0
+[07:35:10] [SENSOR] T=23.1C H=72.0% P=--hPa L=-2lux Rain=SI ok=0
+[07:36:10] [SENSOR] T=23.1C H=72.0% P=--hPa L=-2lux Rain=SI ok=0
+[07:37:10] [SENSOR] T=23.1C H=71.0% P=--hPa L=-2lux Rain=SI ok=0
+[07:38:10] [SENSOR] T=23.1C H=71.0% P=--hPa L=-2lux Rain=SI ok=0
+[07:39:10] [SENSOR] T=23.0C H=71.0% P=--hPa L=-2lux Rain=SI ok=0
+[07:40:10] [SENSOR] T=23.1C H=72.0% P=--hPa L=-2lux Rain=SI ok=0
+[07:41:10] [SENSOR] T=23.0C H=71.0% P=--hPa L=-2lux Rain=SI ok=0
+[07:42:10] [SENSOR] T=23.1C H=71.0% P=--hPa L=-2lux Rain=SI ok=0
+[07:44:09] [SENSOR] T=23.0C H=71.0% P=--hPa L=-2lux Rain=SI ok=0
+[07:45:09] [SENSOR] T=23.0C H=72.0% P=--hPa L=-2lux Rain=SI ok=0
+[07:46:09] [SENSOR] T=22.9C H=71.0% P=--hPa L=-2lux Rain=SI ok=0
+[07:47:09] [SENSOR] T=23.0C H=71.0% P=--hPa L=-2lux Rain=SI ok=0
+[07:48:09] [SENSOR] T=22.9C H=72.0% P=--hPa L=-2lux Rain=SI ok=0
+[07:49:09] [SENSOR] T=23.0C H=71.0% P=--hPa L=-2lux Rain=SI ok=0
+[07:50:09] [SENSOR] T=22.9C H=72.0% P=--hPa L=-2lux Rain=SI ok=0
+[07:51:09] [SENSOR] T=22.9C H=71.0% P=--hPa L=-2lux Rain=SI ok=0
+[07:52:09] [SENSOR] T=22.9C H=72.0% P=--hPa L=-2lux Rain=SI ok=0
+[07:53:09] [SENSOR] T=22.8C H=72.0% P=--hPa L=-2lux Rain=SI ok=0
+[07:54:09] [SENSOR] T=22.8C H=72.0% P=--hPa L=-2lux Rain=SI ok=0
+[07:55:09] [SENSOR] T=22.9C H=72.0% P=--hPa L=-2lux Rain=SI ok=0
+[07:56:09] [SENSOR] T=22.9C H=72.0% P=--hPa L=-2lux Rain=SI ok=0
+[07:57:09] [SENSOR] T=22.9C H=72.0% P=--hPa L=-2lux Rain=SI ok=0
+[07:58:09] [SENSOR] T=22.8C H=72.0% P=--hPa L=-2lux Rain=SI ok=0
+[07:59:09] [SENSOR] T=22.9C H=72.0% P=--hPa L=-2lux Rain=SI ok=0
+[08:00:09] [SENSOR] T=22.9C H=72.0% P=--hPa L=-2lux Rain=SI ok=0
+[08:01:09] [SENSOR] T=23.1C H=72.0% P=--hPa L=-2lux Rain=SI ok=0
+[08:02:09] [SENSOR] T=22.8C H=72.0% P=--hPa L=-2lux Rain=SI ok=0
+[08:04:09] [SENSOR] T=22.9C H=72.0% P=--hPa L=-2lux Rain=SI ok=0
+[08:05:09] [SENSOR] T=22.8C H=72.0% P=--hPa L=-2lux Rain=SI ok=0
+[08:06:09] [SENSOR] T=22.8C H=72.0% P=--hPa L=-2lux Rain=SI ok=0
+[08:07:09] [SENSOR] T=22.8C H=72.0% P=--hPa L=-2lux Rain=SI ok=0
+[08:08:09] [SENSOR] T=22.9C H=72.0% P=--hPa L=-2lux Rain=SI ok=0
+[08:09:09] [SENSOR] T=22.8C H=72.0% P=--hPa L=-2lux Rain=SI ok=0
+[08:10:09] [SENSOR] T=22.8C H=72.0% P=--hPa L=-2lux Rain=SI ok=0
+[08:11:09] [SENSOR] T=22.8C H=72.0% P=--hPa L=-2lux Rain=SI ok=0
+[08:12:09] [SENSOR] T=22.8C H=72.0% P=--hPa L=-2lux Rain=SI ok=0
+[08:13:09] [SENSOR] T=22.8C H=72.0% P=--hPa L=-2lux Rain=SI ok=0
+[08:14:09] [SENSOR] T=22.8C H=72.0% P=--hPa L=-2lux Rain=SI ok=0
+[08:15:09] [SENSOR] T=22.8C H=72.0% P=--hPa L=-2lux Rain=SI ok=0
+[08:16:09] [SENSOR] T=22.8C H=72.0% P=--hPa L=-2lux Rain=SI ok=0
+[08:17:09] [SENSOR] T=22.7C H=72.0% P=--hPa L=-2lux Rain=SI ok=0
+[08:18:09] [SENSOR] T=22.8C H=72.0% P=--hPa L=-2lux Rain=SI ok=0
+[08:19:09] [SENSOR] T=22.8C H=72.0% P=--hPa L=-2lux Rain=SI ok=0
+[08:20:09] [SENSOR] T=22.9C H=72.0% P=--hPa L=-2lux Rain=SI ok=0
+[08:21:09] [SENSOR] T=22.8C H=72.0% P=--hPa L=-2lux Rain=SI ok=0
+[08:22:09] [SENSOR] T=22.8C H=72.0% P=--hPa L=-2lux Rain=SI ok=0
+[08:23:09] [SENSOR] T=22.8C H=72.0% P=--hPa L=-2lux Rain=SI ok=0
+[08:24:09] [SENSOR] T=22.9C H=72.0% P=--hPa L=-2lux Rain=SI ok=0
