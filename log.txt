@@ -4497,3 +4497,5 @@ wnout
 [17:12:08] ERROR DHT11: fallo persistente
 [17:15:08] ERROR DHT11: fallo persistente
 [17:18:08] ERROR DHT11: fallo persistente
+[17:21:08] ERROR DHT11: fallo persistente
+[17:24:08] ERROR DHT11: fallo persistente
