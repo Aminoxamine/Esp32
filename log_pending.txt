@@ -1,1 +1,1 @@
-
+[17:18:08] ERROR DHT11: fallo persistente
