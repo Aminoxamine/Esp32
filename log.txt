@@ -4473,3 +4473,6 @@ wnout
 [09:33:49] [WEB] http://192.168.18.192
 [09:33:49] WiFi OK. IP: 192.168.18.192 Reloj: NTP
 [16:23:44] ERROR DHT11: fallo persistente
+[16:25:47] [DATA] 20 entradas subidas para 2026-04-29
+[16:26:54] ERROR DHT11: fallo persistente
+[16:29:54] ERROR DHT11: fallo persistente
