@@ -4472,3 +4472,4 @@ wnout
 [07:33:45] [BUFFER] 191 entradas pendientes al arrancar
 [09:33:49] [WEB] http://192.168.18.192
 [09:33:49] WiFi OK. IP: 192.168.18.192 Reloj: NTP
+[16:23:44] ERROR DHT11: fallo persistente
