@@ -4481,3 +4481,6 @@ wnout
 [16:35:47] [DATA] 20 entradas subidas para 2026-04-29
 [16:35:54] ERROR DHT11: fallo persistente
 [16:38:54] ERROR DHT11: fallo persistente
+[16:40:48] [DATA] 20 entradas subidas para 2026-04-29
+[16:41:55] ERROR DHT11: fallo persistente
+[16:44:55] ERROR DHT11: fallo persistente
