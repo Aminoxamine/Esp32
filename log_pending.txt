@@ -1,1 +1,5 @@
-
+[09:27:11] [SENSOR] T=23.7C H=69.0% P=--hPa L=-2lux Rain=SI
+[09:28:11] [SENSOR] T=23.5C H=70.0% P=--hPa L=-2lux Rain=SI
+[09:29:11] [SENSOR] T=23.4C H=70.0% P=--hPa L=-2lux Rain=SI
+[09:30:11] [SENSOR] T=23.4C H=67.0% P=--hPa L=-2lux Rain=SI
+[09:31:41] OTA completada v14. Reiniciando...
