@@ -4122,3 +4122,10 @@ wnout
 [09:29:11] [SENSOR] T=23.4C H=70.0% P=--hPa L=-2lux Rain=SI
 [09:30:11] [SENSOR] T=23.4C H=67.0% P=--hPa L=-2lux Rain=SI
 [09:31:41] OTA completada v14. Reiniciando...
+--------------------2026-04-29--------------------
+[07:31:49] === INICIANDO v14 boot#222 ===
+[07:31:49] [RESET] Reset software
+[07:31:49] [INFO] RAM:269492b Boot#222 v14
+[07:31:50] [BUFFER] 170 entradas pendientes al arrancar
+[09:32:22] [WEB] http://10.218.116.118
+[09:32:22] WiFi OK. IP: 10.218.116.118 Reloj: NTP
