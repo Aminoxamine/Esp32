@@ -1,1 +1,7 @@
-
+--------------------2026-04-29--------------------
+[07:31:49] === INICIANDO v14 boot#222 ===
+[07:31:49] [RESET] Reset software
+[07:31:49] [INFO] RAM:269492b Boot#222 v14
+[07:31:50] [BUFFER] 170 entradas pendientes al arrancar
+[09:32:22] [WEB] http://10.218.116.118
+[09:32:22] WiFi OK. IP: 10.218.116.118 Reloj: NTP
