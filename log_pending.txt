@@ -1,2 +1,1 @@
-[16:30:47] [DATA] 20 entradas subidas para 2026-04-29
-[16:32:54] ERROR DHT11: fallo persistente
+
