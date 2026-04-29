@@ -1,1 +1,10 @@
-
+[14:55:34] [SENSOR] T=23.1C H=72.0% P=--hPa L=-2lux Rain=SI
+[14:56:34] [SENSOR] T=23.1C H=72.0% P=--hPa L=-2lux Rain=SI
+--------------------1970-01-01--------------------
+[00:00:01] === INICIANDO v13 boot#220 ===
+[00:00:01] [RESET] Encendido normal
+[00:00:01] [INFO] RAM:269476b Boot#220 v13
+[00:00:01] [BUFFER] 165 entradas pendientes al arrancar
+--------------------2026-04-29--------------------
+[09:25:21] [WEB] http://10.218.116.118
+[09:25:21] WiFi OK. IP: 10.218.116.118
