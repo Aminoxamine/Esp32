@@ -1,1 +1,44 @@
-
+[17:33:08] ERROR DHT11: fallo persistente
+--------------------2026-04-29--------------------
+[07:33:49] === INICIANDO v14 boot#227 ===
+[07:33:49] [RESET] Encendido normal
+[07:33:49] [INFO] RAM:269500b Boot#227 v14
+[07:33:49] [BUFFER] 71 entradas pendientes al arrancar
+[07:34:51] Sin Wi-Fi al arrancar.
+[07:34:52] [SENSOR] T=22.0C H=69.0% P=--hPa L=-2lux Rain=SI ok=0
+[07:35:52] [SENSOR] T=22.1C H=72.0% P=--hPa L=-2lux Rain=SI ok=0
+[07:36:52] [SENSOR] T=22.0C H=72.0% P=--hPa L=-2lux Rain=SI ok=0
+[07:37:52] [SENSOR] T=22.0C H=72.0% P=--hPa L=-2lux Rain=SI ok=0
+[07:38:52] [SENSOR] T=22.0C H=72.0% P=--hPa L=-2lux Rain=SI ok=0
+[07:39:52] [SENSOR] T=22.0C H=72.0% P=--hPa L=-2lux Rain=SI ok=0
+[07:40:52] [SENSOR] T=22.0C H=72.0% P=--hPa L=-2lux Rain=SI ok=0
+[07:41:52] [SENSOR] T=22.1C H=72.0% P=--hPa L=-2lux Rain=SI ok=0
+[07:42:52] [SENSOR] T=22.1C H=72.0% P=--hPa L=-2lux Rain=SI ok=0
+--------------------2026-04-29--------------------
+[07:33:49] === INICIANDO v14 boot#228 ===
+[07:33:49] [RESET] Encendido normal
+[07:33:49] [INFO] RAM:269500b Boot#228 v14
+[07:33:49] [BUFFER] 80 entradas pendientes al arrancar
+[07:34:52] Sin Wi-Fi al arrancar.
+[07:34:53] [SENSOR] T=22.2C H=72.0% P=--hPa L=-2lux Rain=SI ok=0
+[07:35:53] [SENSOR] T=22.2C H=73.0% P=--hPa L=-2lux Rain=SI ok=0
+--------------------2026-04-29--------------------
+[07:33:49] === INICIANDO v14 boot#229 ===
+[07:33:49] [RESET] Encendido normal
+[07:33:49] [INFO] RAM:269500b Boot#229 v14
+[07:33:49] [BUFFER] 82 entradas pendientes al arrancar
+[07:34:52] Sin Wi-Fi al arrancar.
+[07:34:53] [SENSOR] T=22.3C H=72.0% P=--hPa L=-2lux Rain=SI ok=0
+[07:35:53] [SENSOR] T=22.3C H=72.0% P=--hPa L=-2lux Rain=SI ok=0
+[07:36:53] [SENSOR] T=22.3C H=72.0% P=--hPa L=-2lux Rain=SI ok=0
+[07:37:53] [SENSOR] T=22.3C H=72.0% P=--hPa L=-2lux Rain=SI ok=0
+[07:38:53] [SENSOR] T=22.3C H=72.0% P=--hPa L=-2lux Rain=SI ok=0
+--------------------2026-04-29--------------------
+[07:33:49] === INICIANDO v14 boot#230 ===
+[07:33:49] [RESET] Encendido normal
+[07:33:49] [INFO] RAM:269500b Boot#230 v14
+[07:33:49] [BUFFER] 87 entradas pendientes al arrancar
+[09:34:24] [WEB] http://10.218.116.118
+[09:34:24] WiFi OK. IP: 10.218.116.118 Reloj: NTP
+--------------------2026-04-30--------------------
+[08:57:27] OTA completada v15. Reiniciando...
