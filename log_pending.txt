@@ -1,1 +1,14 @@
-
+--------------------2026-04-29--------------------
+[07:34:57] === INICIANDO v15 boot#232 ===
+[07:34:57] [RESET] Encendido normal
+[07:34:57] [INFO] RAM:269500b Boot#232 v15
+[07:34:57] [BUFFER] 87 entradas pendientes al arrancar
+[09:35:30] [WEB] http://10.218.116.118
+[09:35:30] WiFi OK. IP: 10.218.116.118 Reloj: NTP
+--------------------2026-04-29--------------------
+[07:35:29] === INICIANDO v15 boot#233 ===
+[07:35:29] [RESET] Watchdog tarea
+[07:35:29] [INFO] RAM:269500b Boot#233 v15
+[07:35:29] [BUFFER] 87 entradas pendientes al arrancar
+[09:36:18] [WEB] http://10.218.116.118
+[09:36:18] WiFi OK. IP: 10.218.116.118 Reloj: NTP
