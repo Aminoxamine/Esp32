@@ -1,7 +1,1 @@
---------------------2026-04-29--------------------
-[07:34:24] === INICIANDO v15 boot#231 ===
-[07:34:24] [RESET] Reset software
-[07:34:24] [INFO] RAM:269500b Boot#231 v15
-[07:34:24] [BUFFER] 87 entradas pendientes al arrancar
-[09:34:57] [WEB] http://10.218.116.118
-[09:34:57] WiFi OK. IP: 10.218.116.118 Reloj: NTP
+
