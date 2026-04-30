@@ -1,1 +1,11 @@
-
+--------------------2026-04-30--------------------
+[09:04:26] [SENSOR] T=22.4C H=72.0% P=--hPa L=-2lux Rain=SI ok=1
+[09:05:26] [SENSOR] T=22.4C H=72.0% P=--hPa L=-2lux Rain=SI ok=1
+[09:06:26] [SENSOR] T=23.0C H=75.0% P=--hPa L=-2lux Rain=SI ok=1
+--------------------2026-04-29--------------------
+[07:36:18] === INICIANDO v15 boot#234 ===
+[07:36:18] [RESET] Encendido normal
+[07:36:18] [INFO] RAM:269500b Boot#234 v15
+[07:36:18] [BUFFER] 90 entradas pendientes al arrancar
+[09:36:51] [WEB] http://10.218.116.118
+[09:36:51] WiFi OK. IP: 10.218.116.118 Reloj: NTP
