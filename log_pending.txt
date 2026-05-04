@@ -1,4 +1,1 @@
-[12:01:01] [DATA] 8 entradas subidas para 2026-04-30
-[12:01:07] [DATA] 2 entradas subidas para 2026-05-04
-[12:01:12] [SENSOR] T=23.1C H=69.0% P=--hPa L=-2lux Rain=SI ok=1
-[12:02:12] [SENSOR] T=23.0C H=69.0% P=--hPa L=-2lux Rain=SI ok=1
+
