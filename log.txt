@@ -4985,3 +4985,5 @@ wnout
 [11:50:52] [BUFFER] 165 entradas pendientes al arrancar
 [13:51:24] [WEB] http://10.218.116.118
 [13:51:24] WiFi OK. IP: 10.218.116.118 Reloj: NTP
+--------------------2026-05-04--------------------
+[11:51:52] [SENSOR] T=23.1C H=69.0% P=--hPa L=-2lux Rain=SI ok=1
