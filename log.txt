@@ -4987,3 +4987,14 @@ wnout
 [13:51:24] WiFi OK. IP: 10.218.116.118 Reloj: NTP
 --------------------2026-05-04--------------------
 [11:51:52] [SENSOR] T=23.1C H=69.0% P=--hPa L=-2lux Rain=SI ok=1
+[11:53:13] [DATA] 20 entradas subidas para 2026-04-30
+[11:53:19] [DATA] 2 entradas subidas para 2026-05-04
+[11:53:23] [SENSOR] T=23.0C H=69.0% P=--hPa L=-2lux Rain=SI ok=1
+[11:54:23] [SENSOR] T=22.9C H=69.0% P=--hPa L=-2lux Rain=SI ok=1
+--------------------2026-04-29--------------------
+[11:51:24] === INICIANDO v15 boot#243 ===
+[11:51:24] [RESET] Encendido normal
+[11:51:24] [INFO] RAM:269500b Boot#243 v15
+[11:51:24] [BUFFER] 136 entradas pendientes al arrancar
+[13:51:56] [WEB] http://10.218.116.118
+[13:51:56] WiFi OK. IP: 10.218.116.118 Reloj: NTP
