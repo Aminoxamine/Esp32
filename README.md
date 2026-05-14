@@ -1,6 +1,6 @@
 # MeteoStation — Estación Meteorológica IoT con ESP32
 
-Estación meteorológica autónoma basada en un microcontrolador **ESP32 AZ-Delivery WROOM-32** que mide temperatura, humedad, presión atmosférica, intensidad lumínica y lluvia, publica los datos en tiempo real en GitHub y sirve un dashboard web accesible desde cualquier dispositivo.
+Estación meteorológica basada en **ESP32 AZ-Delivery WROOM-32** que mide temperatura, humedad, presión atmosférica, intensidad lumínica y lluvia, publica los datos en tiempo real en GitHub y sirve un dashboard web .
 
 ---
 
